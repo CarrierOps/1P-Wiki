@@ -5,6 +5,16 @@ T
 
 ```mermaid
 flowchart TD
+id0(Google Plx Trix)
+id00(Google Sheets)
+id000(Google App Script)
+id0000(New Data In GCS Bucket)
+id0-->id00
+id00 --> id000
+id000 --> id0000
+id0000 -->id1
+
+subgraph Mage Pipeline
 id1(Import Data From GCS)
 id2(Import State Names From BQ)
 id3(Import Seen Weeks From BQ)
@@ -26,12 +36,10 @@ id10(BigQuery Snapshot)
 id9 --> id10
 id11(Add Seen Weeks to BQ)
 id10 --> id11
-id3 --> id11
 id12(Export To GCS)
-id11 --> id12
 id13(Append To BigQuery)
-id11 --> id13
 id10 --> id12
 id10 -->id13
+end
 
 ```

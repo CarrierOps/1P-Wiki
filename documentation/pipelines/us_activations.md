@@ -11,7 +11,7 @@ flowchart TD
 id0(Google Plx Trix)
 id00(Google Sheets)
 id000(Google App Script)
-id0000(New Data In GCS)
+id0000(New Data In GCS Bucket)
 id0-->id00
 id00 --> id000
 id000 --> id0000

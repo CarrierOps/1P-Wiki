@@ -13,9 +13,31 @@ id1(Import MSL From BigQuery)-->id2(Transform And Clean BigQuery MSL)
 id3(Import MSL From Google Sheets)--> id4(Transform And Clean MSL From Google Sheets)
 id2--> id5(Compare Both MSL)
 id4 -->id5
-id5 --> id6(WIP)
+id6(Delete From Live Payload)
+id7(Append To Historical Payload)
+id8(Append New Records To Live Payload)
+id9(Update Records In Live Payload)
 
 
+id5--> id6
+id5-->id7
+id5--> id8
+id5-->id9
+
+id2-->id6
+id2-->id7
+
+id4-->id8
+id4-->id9
+
+id6--> id10(Delete Records From Live Table In BQ)
+id7--> id11(Append Records To Historical Table In BQ)
+
+id12(Update And Insert aka Upsert Payload)
+id8-->id12
+id9-->id12
+
+id12--> id13(Upsert To Live Table in BQ)
 
 
 ```
