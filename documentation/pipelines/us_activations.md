@@ -48,7 +48,7 @@ end
 ```
 
 ## Extra Details In Flowchart
-1. A google plx trix is setup to pull the activations data into a google sheet eveery week on Tuesday.
+1. A google plx trix is setup to pull the activations data into a google sheet every week on Tuesday.
 2. A google app script is used to extract the data from the plx trix to be stored in GCS as well as used to fire off the pipeline. Any new file added into the `raw` subfolders of the `activationz` bucket is what is used to trigger a pipeline run.
 3. Once the new data from GCS is imported into the Mage pipeline, we also import the seen weeks of the activations data from the table `silver_layer.activations_seen_weeks`. By doing this, we avoid we avoid duplicate records and make sure that each pipeline run contains new data.
 4. We than aggregate the data up from the postal code data to the city level as it allows to create a unique id (`uid`) for our data. There are too many empty and null field in the postal code data to make that level of granularity meaningful.

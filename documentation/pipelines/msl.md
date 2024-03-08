@@ -39,6 +39,8 @@ id9-->id12
 
 id12--> id13(Upsert To Live Table in BQ)
 
+id0(Sheets Snapshot)
+id4--> id0
 
 ```
 ## Extra Details In Flowchart
@@ -87,7 +89,8 @@ id12--> id13(Upsert To Live Table in BQ)
     * Finally, we construct a pandas DataFrame out of the list of dictionaries
     build_payload_map to be used in making payloads in downstream blocks.
 
-4. The next blocks construct payloads for corresponding `Table`, `actions`, with the required `p_id`.
+4. The next blocks construct payloads for corresponding `Table`, `actions`. 
+5. The payloads are then applied to the `live` and `historical` tables in BigQuery.
 
 
 
