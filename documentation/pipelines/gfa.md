@@ -28,12 +28,13 @@ end
 
 ```
 ## Extra Details In Flowchart
-1. A google app script is used to exract the daily data from the plx trix to be stored in GCS as well as used to fire off the pipeline.
-2. Reformat columns ensures columns are in snake case i.e. snake_case
-3. Null date times are filtered out as it prevents proper data type enforcement.
-4. The uid is created from the concatentation of `store_visit_activity_id`, `survey_question_id`, and `response_value`
-5. The uid is needed for the Merge Data Into BigQuery block as it in ensures that every single entry is unique and no data will be added into the table in BigQuery is the uid already exists.
-6. A snapshot of the current table in BigQuery is made as a local backup before the Merge Data step.
+1. A google plx trix is setup to pull the GFA data into a google sheet daily.
+2. A google app script is used to extract the daily data from the plx trix to be stored in GCS as well as used to fire off the pipeline. A new file added into the `raw` subfolder of the `gfa_data` bucket is what is used to trigger a pipeline run.
+3. Reformat columns ensures columns are in snake case i.e. snake_case
+4. Null date times are filtered out as it prevents proper data type enforcement.
+5. The uid is created from the concatentation of `store_visit_activity_id`, `survey_question_id`, and `response_value`
+6. The `uid` is needed for the Merge Data Into BigQuery block as it in ensures that every single entry is unique and no data will be added into the table in BigQuery is the uid already exists.
+7. A snapshot of the current table in BigQuery is made as a local backup before the Merge Data step.
 
 
 ## Links Associated To The GFA Pipeline
