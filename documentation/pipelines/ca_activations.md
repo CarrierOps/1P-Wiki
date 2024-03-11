@@ -3,6 +3,9 @@
 ## Summary
 The CA activations pipeline takes data from a Google Plx Trix and brings that data into BigQuery. The the pipeline itself is shared with the US activations as the data structure and type of data is essentially identical.
 
+## Cadence
+The pipeline is scheduled to run every Tuesday at ~12pm EST.
+
 ## Flowchart
 
 ```mermaid

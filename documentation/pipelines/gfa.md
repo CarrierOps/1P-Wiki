@@ -4,6 +4,10 @@
 ## Sumary
 The GFA pipeline takes data daily from a Google plx trix and brings that data into BigQuery. GFA data mainly pertains to survey data collected by field representatives.
 
+## Cadence
+The pipeline is scheduled to run every day at ~9am EST.
+
+
 
 ## Flowchart
 ```mermaid

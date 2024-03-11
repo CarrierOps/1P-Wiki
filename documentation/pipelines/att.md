@@ -1,6 +1,9 @@
 # Summary
 The ATT pipeline takes data from a Google Sheet and brings that data into BigQuery.
 
+## Cadence
+The pipeline is scheduled to run every Tuesday from within the range of 12pm ~ 3pm EST. Since the data that gets updated is done manually, and is not done on a set schedule, the att pipeline run will vary until we see that the new data is in. Note that this is not the case for the other pipelines.
+
 ## Flowchart
 
 ```mermaid
@@ -93,4 +96,4 @@ Link: [ATT MSL](https://console.cloud.google.com/bigquery?referrer=search&authus
 
 ### Google Sheets
 
-Link:[Google Sheet For Sales Data](https://docs.google.com/spreadsheets/d/1CO9w8Ur9g4Y_BEhHzq715wiJ1t8LFhF9op_rYfwcT4s/edit#gid=225119370)
+Link: [Google Sheet For Sales Data](https://docs.google.com/spreadsheets/d/1CO9w8Ur9g4Y_BEhHzq715wiJ1t8LFhF9op_rYfwcT4s/edit#gid=225119370)

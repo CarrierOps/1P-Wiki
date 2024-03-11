@@ -1,6 +1,10 @@
 # Summary
 The BBY US pipeline takes sellout data from a Google Plx Trix and brings that data into BigQuery. Note that the BBY CA and BBY US pipeline mirror each other.
 
+## Cadence
+The pipeline is scheduled to run every Tuesday at ~12pm EST.
+
+
 ## Flowchart
 
 ```mermaid

@@ -4,6 +4,9 @@
 ## Summary
 The MSL pipeline has 2 primary purposes. The first purpose is to have an up to data MSL in available in BigQuery. The second purpose is to track changes made to the MSL over time.
 
+## Cadence
+TBD
+
 
 ## Flowchart
 
@@ -51,18 +54,18 @@ id4--> id0
     * Normalizes data types.
     * Standardizes characters and removes characters in all entries
     that are not on standard US/CA keyboard.
-    * Removes leading/trailing whitespaces for all entries
+    * Removes leading/trailing whitespaces for all entries.
     * Changes None values and NA type values to be consisent with the output from the msl_live_import block.
   
    ***Sheets Transformations***
     *  Ensures columns are in snake case.
-    *  Normalizes data types
-    *  Removes .0 values at the end of a string
+    *  Normalizes data types.
+    *  Removes .0 values at the end of a string.
     *  Reformats the update_date column to match what is in BQ.
     *  Standardizes characters and removes characters in all entries
-    that are not on standard US/CA keyboard
-    * Standardizes boolean logic values
-    * Removes leading/trailing whitespaces for all entries
+    that are not on standard US/CA keyboard.
+    * Standardizes boolean logic values.
+    * Removes leading/trailing whitespaces for all entries.
 3. The 2 versions are compared and follow this process:
     * The first step is to loop through all of the p_id values
     from the data argument and check if that p_id is in the live
