@@ -59,7 +59,6 @@ This is where the data gets refreshed and taken into GCS.
 
 Link: [Google Plx Trix](https://docs.google.com/spreadsheets/d/1ZRD9BfhBz9WYWz7ZxwtO-6X_1t5XkLCvu39b8ifZSK0/edit#gid=156467221)
 
-### Link To App Script?
 
 
 

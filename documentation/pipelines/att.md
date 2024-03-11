@@ -66,8 +66,8 @@ end
 2. A google app script is used to extract the data from the plx trix to be stored in GCS as well as used to fire off the pipeline. Any new file added into the `raw` subfolders of the `sell-through` bucket is what is used to trigger a pipeline run.
 3. Once the data is imported into the Mage pipeline, we then filter the columns such that all columns are in snake case i.e. snake_case and we are only selecting the columns that we actually need.
 4. Once the new data from GCS is imported into the Mage pipeline, we also import the seen weeks of the activations data from the table `silver_layer.att_daily_sales_seen_weeks`. By doing this, we avoid we avoid duplicate records and make sure that each pipeline run contains new data 
-5. Map SKU And Location  creates a dictionary of the form {'att_SKU_code': SKU}. The `phone` column is then added to data by mapping the `location_number` to `cp_id`.
-6. The ATT sales data is then merged with the ATT MSL using a LEFT JOIN.
+5. Map SKU And Location  creates a dictionary of the form {'att_SKU_code': SKU}. The `phone` column is then added to data by mapping the `location_number` to `cp_id`. The tables needed to get this data are `silver_layer.att_location_mapping` and `silver_layer.sku_code_mapping`.
+6. The ATT sales data is then merged with the `att_msl` table in BigQuery using a LEFT JOIN.
 7. The data is then filtered by removing duplicate `cp_id` and removing null values in the `cp_id` column.
 8. The schema and data types of the sales data are then validated.
 9. A snapshot of the sales data is then taken.
