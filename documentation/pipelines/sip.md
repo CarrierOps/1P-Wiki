@@ -35,7 +35,7 @@ id4_vzw(Validate VZW Schema)
 id1_vzw --> id2_vzw--> id3_vzw-->id4_vzw
 
 
-id_join(Union Join)
+id_join(Union Data)
 
 id4_tmo --> id_join
 id4_att --> id_join
