@@ -35,6 +35,19 @@ id4_vzw(Validate VZW Schema)
 id1_vzw --> id2_vzw--> id3_vzw-->id4_vzw
 
 
+id_join(Union Join)
+
+id4_tmo --> id_join
+id4_att --> id_join
+id4_bby --> id_join
+id4_ca --> id_join
+id4_vzw --> id_join
+
+id_join --> id_bq(BQ snapshot)
+id_join--> id_bq2(Write to BQ)
+
+
+
 
 
 
