@@ -5,7 +5,7 @@
 The MSL pipeline has 2 primary purposes. The first purpose is to have an up to data MSL in available in BigQuery. The second purpose is to track changes made to the MSL over time.
 
 ## Cadence
-TBD
+Weekly --> Day TBD
 
 
 ## Flowchart
