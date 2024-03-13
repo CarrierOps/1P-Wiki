@@ -17,12 +17,12 @@ The pipeline is scheduled to run every day at ~9am EST.
   init: {
     'theme': 'base',
     'themeVariables': {
-      'primaryColor': '#BB2528',
-      'primaryTextColor': '#fff',
-      'primaryBorderColor': '#7C0000',
-      'lineColor': '#F8B229',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff'
+      'primaryColor': '#decbe4',
+      'primaryTextColor': '#635d5c',
+      'primaryBorderColor': '#e0bbff',
+      'lineColor': '#635d5c',
+      'secondaryColor': '#ffdac1',
+      'tertiaryColor': '#bbbbbb'
     }
   }
 }%%
@@ -35,16 +35,16 @@ id000(New Data Gets Put Into GCS Bucket)
 id0 --> id0000
 id0000 --> id00
 id00 --> id000
-id000--- id1
 
-subgraph Mage Pipeline
-
-id1(Import Data From GCS) --> id2(Reformat Columns)-->
-id3(Filter Data) --> id4(Create Unique ID)-->
-id5(Enforce Data Types)--> id6(Export to GCS )
-id5(Enforce Data Types)--> id7(BigQuery Snapshot)-->
-id8(Merge Data Into BigQuery)
+subgraph Mage-Pipeline
+  id1(Import Data From GCS) --> id2(Reformat Columns)-->
+  id3(Filter Data) --> id4(Create Unique ID)-->
+  id5(Enforce Data Types)--> id6(Export to GCS )
+  id5(Enforce Data Types)--> id7(BigQuery Snapshot)-->
+  id8(Merge Data Into BigQuery)
 end
+
+id000 ---> Mage-Pipeline
 
 ```
 ## Extra Details In Flowchart
