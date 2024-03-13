@@ -10,7 +10,23 @@ The pipeline is scheduled to run every day at ~9am EST.
 
 
 ## Flowchart
+
+
 ```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#BB2528',
+      'primaryTextColor': '#fff',
+      'primaryBorderColor': '#7C0000',
+      'lineColor': '#F8B229',
+      'secondaryColor': '#006100',
+      'tertiaryColor': '#fff'
+    }
+  }
+}%%
+
 flowchart TD
 id0(Google Plx Trix)
 id0000(Google Sheets)
