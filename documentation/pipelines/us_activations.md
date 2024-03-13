@@ -2,6 +2,7 @@
 # US Activations Pipeline Documentation
 
 ## Summary
+
 The US activations pipeline takes data from a Google Plx Trix and brings that data into BigQuery. The the pipeline itself is shared with the CA activations as the data structure and type of data is essentially identical.
 
 ## Cadence

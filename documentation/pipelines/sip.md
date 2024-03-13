@@ -1,64 +1,51 @@
+# SIP (Spiff, promo, and incentive)
 
-## Flowchart
+## Summary
+
+This pipeline grabs data from the `Primo, Spiff, and Incentive Tracking` google sheet to bring it in BigQUery in the `sip` table.
+
+## Cadence
+
+Wednesday 8am PST (every week)
+
+The google app script runs on a schedule. Once finished running, it'll the next step in the flowchart, which will trigger the next step and so one - the rest of the flowchart is event-driven.
+
+## FlowChart
+
 ```mermaid
+---
+title: Node
+---
 flowchart TD
+    id0([source sheet])
+    id1[GCS Bucket]
+    id5[(SIP table)]
 
-id1_tmo(Load SIP TMO from GCS)
-id2_tmo(Clean TMO Column Names)
-id3_tmo(Transform TMO Columns)
-id4_tmo(Validate TMO Schema)
-id1_tmo --> id2_tmo--> id3_tmo-->id4_tmo
+    id0 -- SIP Source Export --> id1
 
-id1_att(Load SIP ATT from GCS)
-id2_att(Clean ATT Column Names)
-id3_att(Transform ATT Columns)
-id4_att(Validate ATT Schema)
-id1_att --> id2_att--> id3_att-->id4_att
+    subgraph Mage-pipeline
+        id2[[clean data]]
+        id3[[validate data]]
+        id4[[Write to BigQuery]]
 
-id1_bby(Load SIP BBY from GCS)
-id2_bby(Clean BBY Column Names)
-id3_bby(Transform BBY Columns)
-id4_bby(Validate BBY Schema)
-id1_bby --> id2_bby--> id3_bby-->id4_bby
+        id2 --> id3
+        id3 --> id4
+    end
 
-id1_ca(Load SIP CA from GCS)
-id2_ca(Clean CA Column Names)
-id3_ca(Transform CA Columns)
-id4_ca(Validate CA Schema)
-id1_ca --> id2_ca--> id3_ca-->id4_ca
-
-
-id1_vzw(Load SIP VZW from GCS)
-id2_vzw(Clean VZW Column Names)
-id3_vzw(Transform VZW Columns)
-id4_vzw(Validate VZW Schema)
-id1_vzw --> id2_vzw--> id3_vzw-->id4_vzw
-
-
-id_join(Union Data)
-
-id4_tmo --> id_join
-id4_att --> id_join
-id4_bby --> id_join
-id4_ca --> id_join
-id4_vzw --> id_join
-
-id_join --> id_bq(BQ snapshot)
-id_join--> id_bq2(Write to BQ)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    id1 --> Mage-pipeline
+    id4 --> id5
 ```
+
+## More Details
+
+1. The Google App Script is set up to pull data from the source sheet. It itterates through all Carrier worksheets in order. The script uplaods the data to GCS - each carrier worksheet is uploaded as an individual file
+   * the order is of the carrier worksheets is specified as an array in the app script, and is **VERY** **VERY** important to not change (or to make sure VZW stays as the last item in that array)
+2. Once data is dropped in the 'deep-dives' bucket in the 'sip' subfolder, the Mage pipeline is triggered, and reads the files for all carriers.
+3. Each file is cleaned
+   1. columns are renamed
+   2. special characters are removed
+   3. Nulls & N/As are mapped
+   4. price columns are formated 
+   5. Price cols are converted to floats
+4. The cleaned data's schema is validated against the BigQuery table's schema
+5. The table in BigQuery is entirely replaced with the new batch of data
