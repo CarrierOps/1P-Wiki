@@ -17,15 +17,17 @@ The pipeline is scheduled to run every day at ~9am EST.
   init: {
     'theme': 'base',
     'themeVariables': {
-      'primaryColor': '#decbe4',
-      'primaryTextColor': '#635d5c',
+      'primaryColor': '#0277bd',
+      'primaryTextColor': '#ffffff',
       'primaryBorderColor': '#e0bbff',
-      'lineColor': '#635d5c',
-      'secondaryColor': '#ffdac1',
-      'tertiaryColor': '#bbbbbb'
+      'lineColor': '#a2a2a2',
+      'secondaryColor': '#3f51b5',
+      'tertiaryColor': '#5c8a8a',
+      'tertiaryTextColor': '#ffffff'
     }
   }
 }%%
+
 
 flowchart TD
 id0(Google Plx Trix)

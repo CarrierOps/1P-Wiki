@@ -13,6 +13,20 @@ The google app script runs on a schedule. Once finished running, it'll the next 
 ## FlowChart
 
 ```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#0277bd',
+      'primaryTextColor': '#ffffff',
+      'primaryBorderColor': '#e0bbff',
+      'lineColor': '#a2a2a2',
+      'secondaryColor': '#3f51b5',
+      'tertiaryColor': '#5c8a8a',
+      'tertiaryTextColor': '#ffffff'
+    }
+  }
+}%%
 ---
 title: Node
 ---

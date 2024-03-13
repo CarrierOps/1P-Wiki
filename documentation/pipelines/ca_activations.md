@@ -10,6 +10,21 @@ The pipeline is scheduled to run every Tuesday at ~12pm EST.
 
 ```mermaid
 flowchart TD
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#0277bd',
+      'primaryTextColor': '#ffffff',
+      'primaryBorderColor': '#e0bbff',
+      'lineColor': '#a2a2a2',
+      'secondaryColor': '#3f51b5',
+      'tertiaryColor': '#5c8a8a',
+      'tertiaryTextColor': '#ffffff'
+    }
+  }
+}%%
+
 id0(Google Plx Trix)
 id00(Google Sheets)
 id000(Google App Script)
@@ -19,7 +34,7 @@ id00 --> id000
 id000 --> id0000
 id0000 -->id1
 
-subgraph Mage Pipeline
+subgraph Mage-Pipeline
 id1(Import Data From GCS)
 id2(Import State Names From BQ)
 id3(Import Seen Weeks From BQ)

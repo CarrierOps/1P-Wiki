@@ -11,6 +11,21 @@ Weekly --> Day TBD
 ## Flowchart
 
 ```mermaid
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#0277bd',
+      'primaryTextColor': '#ffffff',
+      'primaryBorderColor': '#e0bbff',
+      'lineColor': '#a2a2a2',
+      'secondaryColor': '#3f51b5',
+      'tertiaryColor': '#5c8a8a',
+      'tertiaryTextColor': '#ffffff'
+    }
+  }
+}%%
+
 flowchart TD
 id1(Import MSL From BigQuery)-->id2(Transform And Clean BigQuery MSL)
 id3(Import MSL From Google Sheets)--> id4(Transform And Clean MSL From Google Sheets)

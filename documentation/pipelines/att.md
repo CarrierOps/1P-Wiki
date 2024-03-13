@@ -2,12 +2,29 @@
 The ATT pipeline takes data from a Google Sheet and brings that data into BigQuery.
 
 ## Cadence
+
+**12pm EST - 3pm EST**
+
 The pipeline is scheduled to run every Tuesday from within the range of 12pm ~ 3pm EST. Since the data that gets updated is done manually, and is not done on a set schedule, the att pipeline run will vary until we see that the new data is in. Note that this is not the case for the other pipelines.
 
 ## Flowchart
 
 ```mermaid
 flowchart TD
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#0277bd',
+      'primaryTextColor': '#ffffff',
+      'primaryBorderColor': '#e0bbff',
+      'lineColor': '#a2a2a2',
+      'secondaryColor': '#3f51b5',
+      'tertiaryColor': '#5c8a8a',
+      'tertiaryTextColor': '#ffffff'
+    }
+  }
+}%%
 id0(Person In Charge Of Updating Google Sheet)
 id00(Google Sheets)
 id000(Google App Script)
@@ -17,7 +34,7 @@ id00 --> id000
 id000 --> id0000
 id0000-->id1
 
-subgraph Mage Pipeline
+subgraph Mage-Pipeline
 
 id1(Import Data From GCS)
 id2(Import Seen Weeks)
