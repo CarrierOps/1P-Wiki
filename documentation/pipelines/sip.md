@@ -19,14 +19,16 @@ The google app script runs on a schedule. Once finished running, it'll the next 
     'themeVariables': {
       'primaryColor': '#0277bd',
       'primaryTextColor': '#ffffff',
-      'primaryBorderColor': '#e0bbff',
-      'lineColor': '#a2a2a2',
-      'secondaryColor': '#3f51b5',
+      'primaryBorderColor': '#b38481',
+      'lineColor': '#E2E2E2',
+      'secondaryColor': '#9e91c9',
       'tertiaryColor': '#5c8a8a',
-      'tertiaryTextColor': '#ffffff'
+      'tertiaryTextColor': '#ffffff',
+      'tertiaryBorderColor': '#b38481'
     }
   }
 }%%
+
 ---
 title: Node
 ---
@@ -63,3 +65,17 @@ flowchart TD
    5. Price cols are converted to floats
 4. The cleaned data's schema is validated against the BigQuery table's schema
 5. The table in BigQuery is entirely replaced with the new batch of data
+
+## Relevant links
+
+### Google Cloud Storage (GCS)
+
+[Sip data](https://console.cloud.google.com/storage/browser/deep-dive/SIP-tracking-resources/raw?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&authuser=1&project=orbital-airfoil-393318&prefix=&forceOnObjectsSortingFiltering=false)
+
+### BigQuery
+
+[sip table](https://console.cloud.google.com/bigquery?referrer=search&authuser=1&project=orbital-airfoil-393318&ws=!1m25!1m4!1m3!1sorbital-airfoil-393318!2sbquxjob_43604433_18e350ef607!3sUS!1m4!1m3!1sorbital-airfoil-393318!2sbquxjob_4ee7cd63_18e3520580e!3sUS!1m4!4m3!1sorbital-airfoil-393318!2ssilver_layer!3sactivations!1m4!1m3!1sorbital-airfoil-393318!2sbquxjob_e61dcd5_18e351ff1c7!3sUS!1m4!4m3!1sorbital-airfoil-393318!2ssilver_layer!3ssip)
+
+### Google App Script
+
+[SIP Source Export](https://script.google.com/u/0/home/projects/1TrYmwmtMBE0q2hQZRRbW_vyxlAKbyHzyX4dGvkJYdhCYOd5dvxKVHzej/edit)
