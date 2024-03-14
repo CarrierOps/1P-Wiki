@@ -5,7 +5,7 @@
 The GFA pipeline takes data daily from a Google plx trix and brings that data into BigQuery. GFA data mainly pertains to survey data collected by field representatives.
 
 ## Cadence
-The pipeline is scheduled to run every day at ~9am EST.
+The pipeline is scheduled to run **every day at ~9am EST**.
 
 
 
@@ -30,23 +30,27 @@ The pipeline is scheduled to run every day at ~9am EST.
 
 
 flowchart TD
-id0(Google Plx Trix)
+id0([Google Plx Trix])
 id0000(Google Sheets)
 id00(Google App Script)
-id000(New Data Gets Put Into GCS Bucket)
+id000[/gfa_data/raw\]
 id0 --> id0000
 id0000 --> id00
-id00 --> id000
+id00--GCS Bucket --> id000
 
 subgraph Mage-Pipeline
-  id1(Import Data From GCS) --> id2(Reformat Columns)-->
-  id3(Filter Data) --> id4(Create Unique ID)-->
-  id5(Enforce Data Types)--> id6(Export to GCS )
-  id5(Enforce Data Types)--> id7(BigQuery Snapshot)-->
-  id8(Merge Data Into BigQuery)
+  id1[[Import Data From GCS]] --> id2[[Reformat Columns]]-->
+  id3[[Filter Data]] --> id4[[Create Unique ID]]-->
+  id5[[Enforce Data Types]]--> id6[[Export to GCS]]
+  id5[[Enforce Data Types]]--> id7[[BigQuery Snapshot]]-->
+  id8[[Merge Data Into BigQuery]] 
 end
+id8[[Merge Data Into BigQuery]] --> id9[(silver_layer.gfa_data)]
 
 id000 ---> Mage-Pipeline
+
+id10[/gfa_data/clean\]
+id6 -->id10
 
 ```
 ## Extra Details In Flowchart

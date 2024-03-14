@@ -1,12 +1,12 @@
-# SIP (Spiff, promo, and incentive)
+# SIP (Spiff, incentive, and promo )
 
 ## Summary
 
-This pipeline grabs data from the `Primo, Spiff, and Incentive Tracking` google sheet to bring it in BigQUery in the `sip` table.
+This pipeline grabs data from the `Promo, Spiff, and Incentive Tracking` google sheet to bring it in BigQUery in the `sip` table.
 
 ## Cadence
 
-Wednesday 8am PST (every week)
+**Wednesday 8am PST (every week)**
 
 The google app script runs on a schedule. Once finished running, it'll the next step in the flowchart, which will trigger the next step and so one - the rest of the flowchart is event-driven.
 

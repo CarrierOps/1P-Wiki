@@ -25,48 +25,48 @@ flowchart TD
     }
   }
 }%%
-id0(Person In Charge Of Updating Google Sheet)
-id00(Google Sheets)
+id0>Person In Charge Of Updating The Google Sheet]
+id00([Google Sheets])
 id000(Google App Script)
-id0000(New Data In GCS Bucket)
+id0000[/sell-through/att_daily_sales/raw\]
 id0-->id00
 id00 --> id000
-id000 --> id0000
+id000-- GCS Bucket --> id0000
 id0000-->id1
 
 subgraph Mage-Pipeline
 
-id1(Import Data From GCS)
-id2(Import Seen Weeks)
-id3(Import ATT Location Mapping)
-id4(Import SKU Mapping)
-id5(Import ATT MSL)
-id6(Import ATT Schema)
+id1[[Import Data From GCS]]
+id2[[Import Seen Weeks]]
+id3[[Import ATT Location Mapping]]
+id4[[Import SKU Mapping]]
+id5[[Import ATT MSL]]
+id6[[Import ATT Schema]]
 
 
-id7(Filter And Format Columns)
+id7[[Filter And Format Columns]]
 id1-->id7
 
-id8(Filter Weeks)
+id8[[Filter Weeks]]
 id7--> id8
 id2--> id8
-id9(Map SKU And Location)
+id9[[Map SKU And Location]]
 id8-->id9
 id3-->id9
 id4-->id9
-id10(ATT Join MSL)
+id10[[ATT Join MSL]]
 
 id9--> id10
 id5--> id10
 
-id11(ATT Validate Schema)
+id11[[ATT Validate Schema]]
 id10-->id11
 id6-->id11
 
-id12(BigQuery Snapshot)
-id13(Append Seen Weeks To BigQuery)
-id14(Append Sales Data To BigQuery)
-id15(Export Sales Data To GCS)
+id12[[BigQuery Snapshot]]
+id13[[Append Seen Weeks To BigQuery]]
+id14[[Append Sales Data To BigQuery]]
+id15[[Export Sales Data To GCS]]
 
 
 id11-->id12
@@ -76,6 +76,15 @@ id11-->id15
 
 
 end
+
+id16[(silver_layer.att_daily_sales)]
+id17[(silver_layer.att_daily_sales_seen_dates)]
+id18[/sell-through/att_daily_sales/clean\]
+
+id13-->id17
+id14-->id16
+id15-->id18
+
 
 ```
 ## Extra Details In Flowchart
