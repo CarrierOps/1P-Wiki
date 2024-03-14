@@ -3,6 +3,8 @@ Notes:
 All buckets and explain what they do
 use strcuture Thomas sent
 
+remove buckets that are not revelent to most people.
+
 ## GCS Bucket File Structure
 ```
     Google-carrier-data-infra
@@ -73,8 +75,8 @@ use strcuture Thomas sent
     │──── supporting-file/
     │──── tf-infra-states/
     │
-    │
-    │
+    │──── the-beach/
+    │──── the-beach-stg/
     │
     │
     │       
