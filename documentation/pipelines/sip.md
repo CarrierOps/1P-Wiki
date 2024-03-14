@@ -61,7 +61,7 @@ flowchart TD
    1. columns are renamed
    2. special characters are removed
    3. Nulls & N/As are mapped
-   4. price columns are formated 
+   4. price columns are formated
    5. Price cols are converted to floats
 4. The cleaned data's schema is validated against the BigQuery table's schema
 5. The table in BigQuery is entirely replaced with the new batch of data
