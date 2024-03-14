@@ -28,7 +28,7 @@ The pipeline is scheduled to run **every Saturday at 1am EST**.
 
 flowchart TD
 
-idsource([Source Sheet])
+idsource([Google 1P MSL Source Sheet])
 idsource --> id3
 
 subgraph Mage-pipeline
