@@ -3,7 +3,7 @@
 The BBY CA pipeline takes sellout data from a Google Plx Trix and brings that data into BigQuery. Note that the BBY CA and BBY US pipeline mirror each other.
 
 ## Cadence
-The pipeline is scheduled to run every Tuesday at ~12pm EST.
+The pipeline is scheduled to run every **Tuesday at ~12pm EST**.
 
 
 ## Flowchart
@@ -25,50 +25,61 @@ flowchart TD
   }
 }%%
 
-id0(Google Plx Trix)
+id0([Google Plx Trix])
 id00(Google Sheets)
 id000(Google App Script)
-id0000(New Data In GCS Bucket)
+id0000[/sell-through/bby_sellout/ca/raw\]
 id0-->id00
 id00 --> id000
-id000 --> id0000
-id0000---id1
+id000--GCS Bucket --> id0000
+id0000--->id1
 
 subgraph Mage-Pipeline
-id1(Import Data From GCS)
-id2(Google City To Esri City)
-id3(Import Seen Weeks From BQ)
-id4(Get Schema From BigQuery)
-id5(Filter By Seen Weeks)
+id1[[Import Data From GCS]]
+id2[[Google City To Esri City]]
+id3[[Import Seen Weeks From BQ]]
+id4[[Get Schema From BigQuery]]
+id5[[Filter By Seen Weeks]]
 id1-->id5
 id3-->id5
-id6(Remove Incomplete Weeks)
+id6[[Remove Incomplete Weeks]]
 id5--> id6
 
-id7(Clean Columns)
-id8(Add Columns)
+id7[[Clean Columns]]
+id8[[Add Columns]]
 id6-->id7
 id7-->id8
 id2-->id8
 
-id9(Validate Schema)
+id9[[Validate Schema]]
 id8--> id9
 id4-->id9
 
-id10(BigQuery Snapshot)
+id10[[BigQuery Snapshot]]
 id9-->id10
 
-id11(Append Seen Weeks To BigQuery)
-id12(Export To GCS)
-id13(Append BBY CA Sales Data To BigQuery)
+id11[[Append Seen Weeks To BigQuery]]
+id12[[Export To GCS]]
+id13[[Append BBY CA Sales Data To BigQuery]]
 
 id9-->id11
 id9-->id12
 id9--->id13
 
 
-
 end
+id14[(silver_layer.bby_sellout)]
+id15[(silver_layer.bby_sellout_seen_weeks)]
+id16[/sell-through/bby_sellout/ca/clean\]
+
+id13 --> id14
+id11 --> id15
+id12 --> id16
+
+
+
+
+
 ```
 ## Extra Details In Flowchart
 1. A google plx trix is setup to pull the BBY CA sellout data into a google sheet every week on Tuesday.

@@ -4,7 +4,7 @@
 The CA activations pipeline takes data from a Google Plx Trix and brings that data into BigQuery. The the pipeline itself is shared with the US activations as the data structure and type of data is essentially identical.
 
 ## Cadence
-The pipeline is scheduled to run every Tuesday at ~12pm EST.
+The pipeline is scheduled to run every **Tuesday at ~12pm EST**.
 
 ## Flowchart
 
@@ -25,42 +25,51 @@ flowchart TD
   }
 }%%
 
-id0(Google Plx Trix)
+id0([Google Plx Trix])
 id00(Google Sheets)
 id000(Google App Script)
-id0000(New Data In GCS Bucket)
+id0000[/activationz/CA_wkly/raw\]
 id0-->id00
 id00 --> id000
-id000 --> id0000
+id000--GCS Bucket --> id0000
 id0000 -->id1
 
 subgraph Mage-Pipeline
-id1(Import Data From GCS)
-id2(Import State Names From BQ)
-id3(Import Seen Weeks From BQ)
-id4(Import Esri City From BQ)
-id5(Filter By Seen Weeks)
+id1[[Import Data From GCS]]
+id2[[Import State Names From BQ]]
+id3[[Import Seen Weeks From BQ]]
+id4[[Import Esri City From BQ]]
+id5[[Filter By Seen Weeks]]
 id1 --> id5
 id3 --> id5
-id6(Aggregate Data Up to City Level)
+id6[[Aggregate Data Up to City Level]]
 id5 --> id6
-id7(Create Google City And uid Columns)
+id7[[Create Google City And uid Columns]]
 id6 --> id7
 id2 --> id7
-id8(Map Google City To Esri City)
+id8[[Map Google City To Esri City]]
 id7 --> id8
 id4 --> id8
-id9(Validate Schema And Data Types)
+id9[[Validate Schema And Data Types]]
 id8 --> id9
-id10(BigQuery Snapshot)
+id10[[BigQuery Snapshot]]
 id9 --> id10
-id11(Add Seen Weeks to BQ)
+id11[[Add Seen Weeks to BQ]]
 id10 --> id11
-id12(Export To GCS)
-id13(Append To BigQuery)
+id12[[Export To GCS]]
+id13[[Append To BigQuery]]
 id10 --> id12
 id10 -->id13
 end
+
+id14[(silver_layer.activations_seen_weeks)]
+id15[(silver_layer.activations)]
+id16[/activationz/CA_wkly/clean\]
+
+id11--> id14
+id13-->id15
+id12 --> id16
+
 
 ```
 
