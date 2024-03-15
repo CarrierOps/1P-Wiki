@@ -2,7 +2,7 @@
 # MSL Pipeline Documentation
 
 ## Summary
-The MSL pipeline has 2 primary purposes. The first purpose is to have an up to data MSL in available in BigQuery. The second purpose is to track changes made to the MSL over time.
+The MSL pipeline has 2 primary purposes. The first purpose is to have an up to date MSL in available in BigQuery. The second purpose is to track changes made to the MSL over time.
 
 ## Cadence
 The pipeline is scheduled to run **every Saturday at 1am EST**.
@@ -142,7 +142,7 @@ The Table reference in BQ is `silver_layer.msl`
 
 Link: [Historical Changes MSL](https://console.cloud.google.com/bigquery?referrer=search&authuser=0&project=orbital-airfoil-393318&ws=!1m5!1m4!4m3!1sorbital-airfoil-393318!2ssilver_layer!3smsl_historical&rapt=AEjHL4P2Aj3Y_3y1lr9qjXMkE81QjHY1rnPyy4fSUwgdCq-kZxQ0eVvXh6B5msvwDWyBpmXY1OatLBl-_UhelmLO-0yf5_EmwNwVLIrCvqetfkngIwSIWV8)
 
-The Table reference in BQ is `silver_layer_historical`
+The Table reference in BQ is `silver_layer_msl_historical`
 
 
 

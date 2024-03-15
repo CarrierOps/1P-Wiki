@@ -1,7 +1,5 @@
 # Google Cloud Storage
-Notes:
-All buckets and explain what they do
-use strcuture Thomas sent
+
 
 ## GCS Bucket File Structure
 ```
@@ -73,8 +71,8 @@ use strcuture Thomas sent
     │──── supporting-file/
     │──── tf-infra-states/
     │
-    │
-    │
+    │──── the-beach/
+    │──── the-beach-stg/
     │
     │
     │       
