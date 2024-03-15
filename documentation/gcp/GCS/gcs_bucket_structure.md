@@ -1,9 +1,5 @@
 # Google Cloud Storage
-Notes:
-All buckets and explain what they do
-use strcuture Thomas sent
 
-remove buckets that are not revelent to most people.
 
 ## GCS Bucket File Structure
 ```
