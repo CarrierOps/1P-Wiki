@@ -31,3 +31,7 @@ A messaging service has 4 main components (it has others but we won't discuss th
 Pub/Sub is just one example of a messageing service. There are others such as, Apache Kafka, RabbitMQ, AWS SQS, etc.
 
 ## Why and how do we use it
+
+Messaging services like Pub/Sub have many many use cases such as streaming data, communication between distributed systems/micro-serivces, creating event-driven processes, etc. For our use cases, we use Pub/Sub to create an event-driven architecture on GCP. 
+
+![alt text]('https://github.com/CarrierOps/1P-Wiki/tree/main/imgs/PubSub_event_example.png')
