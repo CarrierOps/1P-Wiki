@@ -1,9 +1,10 @@
 # Summary
+
 The BBY US pipeline takes sellout data from a Google Plx Trix and brings that data into BigQuery. Note that the BBY CA and BBY US pipeline mirror each other.
 
 ## Cadence
-The pipeline is scheduled to run **every Tuesday at ~12pm EST**.
 
+The pipeline is scheduled to run **every Tuesday at ~12pm EST**.
 
 ## Flowchart
 
@@ -78,7 +79,9 @@ id12 --> id16
 
 
 ```
+
 ## Extra Details In Flowchart
+
 1. A google plx trix is setup to pull the BBY US sellout data into a google sheet every week on Tuesday.
 2. A google app script is used to extract the data from the plx trix to be stored in GCS as well as used to fire off the pipeline. Any new file added into the `raw` subfolders of the `sell-through` bucket is what is used to trigger a pipeline run.
 3. Once the new data from GCS is imported into the Mage pipeline, we also import the seen weeks of the BBY US sales data from the table `silver_layer.bby_sellout_seen_weeks`. By doing this, we avoid we avoid duplicate records and make sure that each pipeline run contains new data.
@@ -89,13 +92,11 @@ id12 --> id16
 8. A snapshot of the data is then exported to GCS.
 9. Seen weeks, and BBY Sellout Data are then appended to BigQuery.
 
-
 ## Links Associated To The BBY US Pipeline
 
 ### Google Cloud Storage
 
-Link: [GCS Buckets](https://console.cloud.google.com/storage/browser/sell-through/bby_sellout/ca?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&authuser=0&project=orbital-airfoil-393318&prefix=&forceOnObjectsSortingFiltering=false)
-
+Link: [GCS Buckets](<https://console.cloud.google.com/storage/browser/sell-through/bby_sellout/ca?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&authuser=0&project=orbital-airfoil-393318&prefix=&forceOnObjectsSortingFiltering=false>)
 
 ### BigQuery
 
@@ -106,4 +107,5 @@ Link: [BBY Seen Weeks](https://console.cloud.google.com/bigquery?referrer=search
 Link: [Google To Esri City Mapping](https://console.cloud.google.com/bigquery?referrer=search&authuser=0&project=orbital-airfoil-393318&ws=!1m5!1m4!4m3!1sorbital-airfoil-393318!2ssilver_layer!3sgoogle_to_esri_city_mapping&rapt=AEjHL4M3f1x-ugX3r2tv7CC0cfTq6BB4R8m1vz8I7eRwRzIIlweBDeDyb1Szukb44sXCvkGPZQRqkkldaGjC0hco7N8INVwB2iIz_1GXSr4oQIBheX6SdLo&pli=1)
 
 ### Google Plx Trix
+
 Link: [Google Plx Trix And Google Sheets](https://docs.google.com/spreadsheets/d/1fCZYXlIVGgM5Js712ehdhkABy0zDDv9lReyW2O9cjaA/edit?resourcekey=0-gw_FuZqGmF7pg7zGv5W_bg#gid=156467221)

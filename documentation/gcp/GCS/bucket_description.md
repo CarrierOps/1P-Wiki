@@ -23,10 +23,15 @@
 
 
 ## drift-wood
+* Works with dispatcher pipeline
+* If there is no match from the dispatcher pipeline, the file will go to this bucket.
 
 ## gcf-v2-sources-788520541806-us-west1
+* Google managed version of cloud functions deployment.
+* Allows you to see source code of the cloud function.
 
 ## gcf-v2-uploads-788520541806-us-west1
+* Google managed bucket to hold code.
 
 
 
@@ -55,9 +60,15 @@
 * The folder labelled `att_daily_sales` contains only att sales data and is split into `raw` and `clean` subfolders.
 
 ## supporting-file
-
+* Stores supporting material from the program.
+* Maybe store historical data down the road.
 
 ## tf-infra-states
+* https://opentofu.org/docs/intro/
+* Link documentation maybe?
+* We're terraforming mars.
+* Complicated
+
 
 
 ## the-beach
