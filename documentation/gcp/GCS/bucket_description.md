@@ -63,7 +63,7 @@
 
 - The bucket contains all of the sales data from Best Buy and ATT.
 - The folder labelled `bby_sellout` contains only BBY sales data and contains folders for `ca` and `us` data.
-- Like in other buckets, the `ca` and `us` subfolders are split into `raw` and `clean` subfolders where the `raw` data comes form the `Google 1P Sellout And Activations Data` google plx trix and the `clean` data comes from the BBY pipeline.
+- Like in other buckets, the `ca` and `us` subfolders are split into `raw` and `clean` subfolders where the `raw` data comes from the `Google 1P Sellout And Activations Data` google plx trix and the `clean` data comes from the BBY pipeline.
 - The folder labelled `att_daily_sales` contains only att sales data and is split into `raw` and `clean` subfolders.
 
 ## supporting-file
