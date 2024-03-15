@@ -15,4 +15,3 @@ This list will list out all Pub/Sub topics & their subscribers. Top-level bullte
     * Topic that is written to every time a file is dropped in the `sell-through` [bucket in GCS]('https://github.com/CarrierOps/1P-Wiki/blob/main/documentation/gcp/GCS/gcs.md'). This is done by using [Eventarc](''). Then the subscriber of this topic triggers the [att ppln trigger cloud function]('') using a push delivery type.
   * **subscriber**:
     * eventarc-us-west1-trigger-att-sales-silver-ppln-804024-sub-713
-* 
