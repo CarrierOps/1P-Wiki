@@ -2,7 +2,7 @@
 
 BigQuery is the star of the show. It is where all data used for reporting, dashboard, analytics, etc is stored. It is where all raw data ends up after being cleaned, refined, aggregated, transformed, and modeled.
 
-It houses silver, gold, and platinum layer data. You can [check out this documentation](https://github.com/CarrierOps/1P-Wiki/blob/main/wiki/Tutorials/Architecture/data-layer.md) for more details on the different layers of data.
+It houses silver, gold, and platinum layer data. You can [check out this documentation](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Tutorials/Architecture/data-layer.md) for more details on the different layers of data.
 
 <!-- Our data and tables in BigQuery are structured in into the following layers: `silver_layer`, `gold_layer`, and `platinum_layer`. Each tier represents a specific classification of data. **Note:** There is a `bronze` layer, but that only exists in Google Cloud Storage(GCS) and that is where all of our raw data is stored.
 
