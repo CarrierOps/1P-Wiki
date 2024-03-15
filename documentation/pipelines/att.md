@@ -45,7 +45,6 @@ subgraph Mage-Pipeline
   id9[[Map SKU & Location]]
   id10[[Join MSL]]
   id11[[Validate Schema]]
-  id12[[BigQuery Snapshot]]
 
   id1-->id7
   id7--> id8
@@ -55,10 +54,10 @@ subgraph Mage-Pipeline
   id9--> id10
   id5--> id10
   id10-->id11
-  id11-->id12
 
 end
 
+id12[(BigQuery Snapshot)]
 id16[(Append Sales)]
 id17[(Track ingested Data)]
 id19(GCS Bucket)
@@ -67,6 +66,7 @@ id12~~~id16
 id12~~~id17
 id12~~~id19
 
+id11-->id12
 id11-->id17
 id11-->id16
 id11-->id19
