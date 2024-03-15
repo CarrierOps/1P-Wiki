@@ -41,7 +41,7 @@ Suppose we want a script (Python or other) to run whenever something happens, fo
 - Script triggered via an HTTP POST request. In most use cases, the HTTP POST request is simply used as a trigger, but you can also pass data via this POST request to your script if needed
 - Each subscriber can only trigger one script (i.e. only make an HTTP request to 1 pre-defined URL)
 - You can have many subscribers per topic. You can trigger many scripts via the same triggering mechanism.
-- Subscribers can be setup to use granular permissions for security, and to access secured (via [IAM]('')) scripts/applications.
+- Subscribers can be setup to use granular permissions for security, and to access secured (via [IAM](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/IAM/iam.md)) scripts/applications.
 - Subscribers can filter messages so they only receive the ones pertinent to their needs.
 
 <figure align="center">
