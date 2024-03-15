@@ -1,8 +1,3 @@
-notes: silver, gold, plat etc
-dev vs prod
-Links to wiki
-Used Table names -> Link to catalog sheet
-connections between different services
 
 # BigQuery Structure
 Our data and tables in BigQuery are structured in into the following layers: `silver_layer`, `gold_layer`, and `platinum_layer`. Each tier repesents a specific classification of data. **Note:** There is a `bronze` layer, but that only exists in Google Cloud Storage(GCS) and that is where all of our raw data is stored.
