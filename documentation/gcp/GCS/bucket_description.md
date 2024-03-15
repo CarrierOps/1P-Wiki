@@ -38,7 +38,6 @@
 * Google managed bucket to hold code.
 
 
-
 ## gfa_data
 
 - This bucket stores all of the daily GFA data.

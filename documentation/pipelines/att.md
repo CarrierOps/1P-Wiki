@@ -97,7 +97,7 @@ id000(Google App Script)
 id0000[/sell-through/att_daily_sales/raw\]
 id0-->id00
 id00 --> id000
-id000-- GCS Bucket --> id0000
+id000 --> id0000
 id0000-->id1
 
 subgraph Mage-Pipeline
