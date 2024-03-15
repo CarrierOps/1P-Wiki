@@ -18,7 +18,6 @@
 
 ## cloud-functions-deployments
 
-- Confirm with Thomas
 - This bucket stores all of the cloud functions that are used for our entire infrastructure.
 - An example of where we use cloud functions are in the majority of our data pipelines
 
@@ -72,10 +71,10 @@
 * Maybe store historical data down the road.
 
 ## tf-infra-states
-* https://opentofu.org/docs/intro/
-* Link documentation maybe?
-* We're terraforming mars.
+* We're terraforming Mars.
 * Complicated
+* https://opentofu.org/docs/intro/
+
 
 
 
