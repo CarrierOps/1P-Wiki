@@ -1,4 +1,5 @@
 # GCS Bucket Description
+**Note:** The term ``bucket`` refers to a place where data files are stored. Others may use the term `bin`, but we refer to all of the places where raw/clean data files are stored as `buckets`.
 
 ## 1p-advocacy
 
