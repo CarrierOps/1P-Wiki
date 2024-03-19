@@ -11,10 +11,24 @@ This Cloud Function is event-driven; it is triggered & run whenever a new file i
 ## Diagram
 
 <figure align="center">
-    <img src="../../../imgs/PubSub_event_example.png" width="700" height="200">
-  <figcaption>Fig 1: Message published to topic when a new file is added to our storage. The subscriber then triggers a script to work.</figcaption>
+    <img src="../../../imgs/csv-to-parquet-diag.png" width="700" height="340">
+  <figcaption>High-level diagram showing the how csv-to-parquet Cloud Function works.</figcaption>
 </figure>
 
 ## Development Operations
 
-sdfs
+This section has 2 sub-sections. The [first one](#editing-the-python-code) walks you through how to edit the python code that is run on Cloud Function. The [second one](#deployment) gives a high-level overview of how the deployment of the code to Cloud Function/GCP works
+
+### Editing the python code
+
+This is done locally, from your computer, so make sure [you're all set up locally](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/Setting-up-your-computer.md).
+
+Make sure you're added as a contributor to [the github repo](https://github.com/CarrierOps/gcp-ppln-csv-parquet). (If you click on the link and you can see things, then you're good to go, if not, contact Thomas or Michael to be added as a contributor)
+
+[Clone the repository](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md#cloning) somewhere that makes sense on your computer (for example, in a folder labeled 'data-infrastructure' inside a folder called 'Google Carrier' on your desktop).
+
+Then open the repository up with your favorite code editor
+> :bulb: **Quick-Tip** trick on how to do that
+
+
+### Deployment
