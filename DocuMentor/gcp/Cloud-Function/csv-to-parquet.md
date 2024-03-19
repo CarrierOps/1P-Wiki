@@ -28,7 +28,22 @@ Make sure you're added as a contributor to [the github repo](https://github.com/
 [Clone the repository](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md#cloning) somewhere that makes sense on your computer (for example, in a folder labeled 'data-infrastructure' inside a folder called 'Google Carrier' on your desktop).
 
 Then open the repository up with your favorite code editor
-> :bulb: **Quick-Tip** trick on how to do that
+> :bulb: **Quick-Tip**
+>
+> - After cloning the github repo, cd into it. From the command line, type 'cd csv-` then hit the <kbd>tab</kbd> to auto-complete then hit <kbd>enter</kbd>
+>
+> - Then enter the command 'code .'
+> - Happy coding!
 
+To edit the code, open up `main.py` which is in the `src` directory.
+
+Do not edit any other file!
+
+> **Note**: You will not be able to run/test the code locally. There are ways to do it. Reach out to Thomas to see how.
 
 ### Deployment
+
+<figure align="center">
+    <img src="../../../imgs/cs-parquet-devops.png" width="1000" height="350">
+  <figcaption>High-level diagram showing the how csv-to-parquet Cloud Function works.</figcaption>
+</figure>
