@@ -16,6 +16,10 @@ Development & bug fixing is done exclusively on the dev branch (or feature, hotf
 
 ### Data
 
-We duplicate our data across production and development to have 2 exact copies of it: one copy to power reports, dashboards, slide decks, and another copy used for developing. In [BigQuery](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/BigQuery.md)
+We duplicate our data across production and development to have 2 exact copies of it: one copy to power reports, dashboards, slide decks, and another copy used for developing. The 2 environments are split into separate datasets in [BigQuery](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/BigQuery.md), where the development environment will have the same naming as the production environment with the "dev\_" prefix added.
 
-<!-- All of our main infrastructure are exists in 2 layers being `dev` and `prod`. The `prod` layer stands for production and is the layer that our infrastructure is using and is running on. All tables in BigQuery without the `dev` abbreviation is a `prod` table. The `dev` layer is very similar to the `prod` layer as it mirrors the `prod` layer for the most part. The reason the `dev` layer exists is that if we need to make changes/edits to our infrastructure we can do it to the `dev` layer without breaking anything in the `prod` layer which is currently running all of our infrastructure. Most of the work is done in the `dev` environment of any piece of infrastructure. -->
+To keep the dev & prod environments synced and up-to-date with each other (to make sure they have the same data), a script is run weekly. We treat the production data as the source of truth. Once a week, on weekends, a script running in [Elements](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/platforms/Elements.md), will grab the last 2 quarters worth of data from the production environment and will overwrite all data in the development environment with the "source of truth" data. This set-up let's us tinker with data in dev as much as we want and ensures that the following week we will have access to clean, up to date data once again in dev to tinker with some more.
+
+> **Note**
+>
+> We only split data between dev & prod in BigQuery (our data warehouse), **not** in GCS (our data lake).
