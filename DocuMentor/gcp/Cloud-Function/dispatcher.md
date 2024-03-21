@@ -5,8 +5,6 @@
 This pipeline grabs files from `the-beach` bucket and drops it into the appropriate bucket within the data lake. It uses 2 files - bucket_dispatch.json & folder_dispatch.json to match key words within the source file name with the destination bucket/folder.
 
 
-## Diagram
-
 
 ## Diagram
 
