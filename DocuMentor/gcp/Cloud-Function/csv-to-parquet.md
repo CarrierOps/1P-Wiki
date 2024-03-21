@@ -33,7 +33,7 @@ Then open the repository up with your favorite code editor
 >
 > - After cloning the github repo, cd into it. From the command line, type 'cd csv-` then hit <kbd>tab</kbd> to auto-complete then hit <kbd>enter</kbd>
 >
-> - Then enter the command 'code .'
+> - Then enter the command `code .`
 > - Happy coding!
 
 To edit the code, open up `main.py` which is in the `src` directory.
