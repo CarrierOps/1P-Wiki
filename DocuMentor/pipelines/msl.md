@@ -128,6 +128,7 @@ id13 --> id15
 4. The next blocks construct payloads for corresponding `Table`, `actions`. 
 5. The payloads are then applied to the `live` and `historical` tables in BigQuery.
 6. **Note: There is no overlap between the historical and live tables.**
+   
 
 
 
