@@ -36,7 +36,7 @@ Then open the repository up with your favorite code editor
 
 > :bulb: **Quick-Tip**
 >
-> - After cloning the github repo, cd into it. From the command line, type `cd trigger_att` then hit <kbd>tab</kbd> to auto-complete then hit <kbd>enter</kbd>
+> - After cloning the github repo, cd into it. From the command line, type `cd gcp-ppln-trigger-att` then hit <kbd>tab</kbd> to auto-complete then hit <kbd>enter</kbd>
 >
 > - Then enter the command 'code .'
 > - Happy coding!
