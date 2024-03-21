@@ -1,5 +1,6 @@
 # GCS Bucket Description
-**Note:** The term ``bucket`` refers to a place where data files are stored. Others may use the term `bin`, but we refer to all of the places where raw/clean data files are stored as `buckets`.
+
+**Note:** The term `bucket` refers to a place where data files are stored. They are the 'top-level' storage containers. You can, for most intents & purposes, think of them as a traditionally folder, that can contain other folders & any type of files, images, videos, etc. If you're coming from Azure, a bucket is a container in blob storage, and if you're coming from AWS,a bucket is the same thing as a bucket in S3.
 
 ## 1p-advocacy
 
@@ -27,16 +28,18 @@
 - This bucket stores all of the raw data from the `Promo, Spiff, and Incentive Tracking` google sheet.
 
 ## drift-wood
-* Works with dispatcher pipeline
-* If there is no match from the dispatcher pipeline, the file will go to this bucket.
+
+- Works with dispatcher pipeline
+- If there is no match from the dispatcher pipeline, the file will go to this bucket.
 
 ## gcf-v2-sources-788520541806-us-west1
-* Google managed version of cloud functions deployment.
-* Allows you to see source code of the cloud function.
+
+- Google managed version of cloud functions deployment.
+- Allows you to see source code of the cloud function.
 
 ## gcf-v2-uploads-788520541806-us-west1
-* Google managed bucket to hold code.
 
+- Google managed bucket to hold code.
 
 ## gfa_data
 
@@ -68,16 +71,15 @@
 - The folder labelled `att_daily_sales` contains only att sales data and is split into `raw` and `clean` subfolders.
 
 ## supporting-file
-* Stores supporting material from the program.
-* Maybe store historical data down the road.
+
+- Stores supporting material from the program.
+- Maybe store historical data down the road.
 
 ## tf-infra-states
-* We're terraforming Mars.
-* Complicated
-* https://opentofu.org/docs/intro/
 
-
-
+- We're terraforming Mars.
+- Complicated
+- https://opentofu.org/docs/intro/
 
 ## the-beach
 

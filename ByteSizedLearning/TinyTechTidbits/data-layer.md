@@ -1,4 +1,4 @@
- # Data Layer
+# Data Layer
 
 To enhance the efficiency, reliability, and accessibility of our data, we've adopted a layered architecture (also called medallion architecture) within our data infrastructure. This architecture divides our data into four distinct layers: bronze, silver, gold, and platinum. Each layer represents a different stage in the data's lifecycle, from raw ingestion to refined analytics-ready datasets. This structured approach ensures that our data is managed, processed, and utilized effectively to support reporting, analytics, and decision-making processes.
 
@@ -33,14 +33,9 @@ The platinum layer is a subset of the gold layer, specifically tailored for end-
 
 Data in this layer lives in BigQuery. It's worth noting that we could consider dashboards, reports, etc as being part of this layer.
 
-
-
-
-
-
-<!-- 
+<!--
  ## Description
- 
+
  Our data and tables in BigQuery are structured in into the following layers: `silver_layer`, `gold_layer`, and `platinum_layer`. Each tier represents a specific classification of data. **Note:** There is a `bronze` layer, but that only exists in Google Cloud Storage(GCS) and that is where all of our raw data is stored.
 
 **silver_layer:** This layer takes the data from the `bronze` and transforms/cleans it such that it is accurate and easily queryable in BigQuery.
