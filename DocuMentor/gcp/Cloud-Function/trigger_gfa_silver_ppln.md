@@ -10,7 +10,7 @@ It  trigger the mage pipeline via a post request and passes these runtime variab
 *  **gcp_projectID**: The project name of everything within our data infrastructure.
 *  **layer_env**: The layer in which we are running the pipeline i.e. `dev` or `prod`. For more info about out data layers, click the link [here](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/dev-prod.md).
 * **path_to_keyfile**: The path to our credentials file that allows us to use various services on our Google Cloud infrastructure. 
-*  **source_bucket**: The bucket that all of the `clean` and `raw` data for the pipeline can be found.
+*  **object_key**: The specific file that we are importing from GCS that contains the `raw` data.
 
 
 

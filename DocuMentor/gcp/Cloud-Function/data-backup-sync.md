@@ -1,11 +1,19 @@
 # data-backup-sync
 
 ## Summary
-This function backs up all of the all of the tables in BigQuery into the `infra-data-backups` bucket in GCS. This function is triggered by a `pubsub topic`.
+This function backs up all of the all of the tables in BigQuery into the `infra-data-backups` bucket in GCS. This function is triggered by a `pubsub subscriber` that is subscribed to this [pubsub topic](https://console.cloud.google.com/cloudpubsub/topic/detail/data_backup_topic?project=orbital-airfoil-393318&authuser=0). This [cloud scheduler](https://console.cloud.google.com/cloudscheduler/jobs/edit/us-west1/data_backup_scheduler?authuser=0&project=orbital-airfoil-393318) publishes messages to this topics at this at `12pm EST every Friday`. 
 
+For more information about `pubsub` or `Scheduler` see the following links:
+[pubsub](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/PubSub/pubsub.md)
 
+[Scheduler](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/Scheduler/scheduler.md)
 
 ## Diagram
+
+<figure align="center">
+    <img src="../../../imgs/data-backup-sync-flowchart .png" width="95%">
+  <figcaption>High-level diagram showing the how data-backup-sync Cloud Function works.</figcaption>
+</figure>
 
 
 
