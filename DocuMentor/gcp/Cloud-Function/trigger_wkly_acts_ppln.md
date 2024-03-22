@@ -33,7 +33,7 @@ This is done locally, from your computer, so make sure [you're all set up locall
 
 Make sure you're added as a contributor to [the github repo](https://github.com/CarrierOps/gcp-ppln-trigger-wkly-activations-ppln.git). (If you click on the link and you can see things, then you're good to go, if not, contact Thomas or Michael to be added as a contributor)
 
-[Clone the repository](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md#cloning) somewhere that makes sense on your computer (for example, in a folder labeled 'data-infrastructure' inside a folder called 'Google Carrier' on your desktop).
+[Clone the repository](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md#cloning) somewhere that makes sense on your computer (for example, in a folder labeled `data-infrastructure` inside a folder called `Google Carrier` on your desktop).
 
 Then open the repository up with your favorite code editor
 
