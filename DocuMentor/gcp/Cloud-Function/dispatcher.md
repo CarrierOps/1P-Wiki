@@ -2,7 +2,7 @@
 
 ## Summary
 
-This pipeline grabs files from `the-beach` bucket and drops it into the appropriate bucket within the data lake. It uses 2 files - bucket_dispatch.json & folder_dispatch.json to match key words within the source file name with the destination bucket/folder.
+This pipeline grabs files from `the-beach` bucket and drops it into the appropriate bucket within the data lake. It uses 2 files - `bucket_dispatch.json` & `folder_dispatch.json` to match key words within the source file name with the destination bucket/folder.
 
 
 
@@ -16,17 +16,17 @@ This pipeline grabs files from `the-beach` bucket and drops it into the appropri
 
 ## Development Operations
 
-This section has 2 sub-sections. The [first one](#editing-the-python-code) walks you through how to edit the python code that is run on Cloud Function. The [second one](#deployment) gives a high-level overview of how the deployment of the code to Cloud Function/GCP works
+This section has 2 sub-sections. The [first one](#editing-the-python-code) walks you through how to edit the python code that is run on Cloud Function. The [second one](#deployment) gives a high-level overview of how the deployment of the code to Cloud Function/GCP works.
 
 ### Editing the python code
 
 This is done locally, from your computer, so make sure [you're all set up locally](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/Setting-up-your-computer.md).
 
-Make sure you're added as a contributor to [the github repo](https://github.com/CarrierOps/gcp-ppln-dispatcher). (If you click on the link and you can see things, then you're good to go, if not, contact Thomas or Michael to be added as a contributor)
+Make sure you're added as a contributor to [the github repo](https://github.com/CarrierOps/gcp-ppln-dispatcher). (If you click on the link and you can see things, then you're good to go, if not, contact Thomas or Michael to be added as a contributor).
 
 [Clone the repository](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md#cloning) somewhere that makes sense on your computer (for example, in a folder labeled `data-infrastructure` inside a folder called `Google Carrier` on your desktop).
 
-Then open the repository up with your favorite code editor
+Then open the repository up with your favorite code editor.
 
 > :bulb: **Quick-Tip**
 >
@@ -52,32 +52,32 @@ The tl;dr is that the Cloud Function is deployed using Terraform via GitHub acti
 
 #### Deployment Workflow
 
-The overall flow of how the code is deployed to GCP is shown in the diagram below
+The overall flow of how the code is deployed to GCP is shown in the diagram below.
 
 <figure align="center">
     <img src="../../../imgs/dispatcher-devops.png" width="95%">
   <figcaption>High-level diagram showing the how disptcher-ppln Cloud Function DevOps works.</figcaption>
 </figure>
 
-- Code is edited locally (on your computer), then pushed to GitHub on the dev branch
+- Code is edited locally (on your computer), then pushed to GitHub on the dev branch.
 - When pushes are made to the GitHub repo on any branch other than main, it kicks off a CI (continuous integration) pipeline.
-  - this CI pipeline is run via [GitHub actions](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md#github-actions)
+  - this CI pipeline is run via [GitHub actions](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md#github-actions).
   - It runs things like formatters, security checks, unit tests, etc.
-  - It is a WIP in progress
+  - It is a WIP in progress.
 - When a Pull Request (PR) is made to main, another action is kicked off to get the terraform plan and write as a comment in the PR.
-- When the PR is accepted and merged into main, the CD (continuous deployment) pipeline is kicked off
-  - Also run via GitHub actions
-  1. Takes all relevant files to run the code (.py files, requirements.txt, any other config files)
-  2. creates a zip folder with these files
-  3. pushes the zip folder to a bucket in GCS
-  4. runs `terraform apply` to deploy re-deploy the cloud function with the latest code changes
+- When the PR is accepted and merged into main, the CD (continuous deployment) pipeline is kicked off.
+  - Also run via GitHub actions.
+  1. Takes all relevant files to run the code (.py files, requirements.txt, any other config files).
+  2. Creates a zip folder with these files.
+  3. Pushes the zip folder to a bucket in GCS.
+  4. Runs `terraform apply` to deploy/re-deploy the cloud function with the latest code changes.
 
 > :exclamation: **Important** :exclamation:
 >
 > It is vital for the code (.py files and all) to be added to the GCS bucket or else terraform won't redeploy the Cloud Function!
 >
-> Terraform only tracks state/changes in infrastructure, not code or files (that's what Git does). So in order to trigger a state change in the infrastructure, we created a special bucket in GCS to house the zip folders of the code files of all cloud functions. This bucket & all subfolder are managed/tracked by terraform.
+> Terraform only tracks state changes in infrastructure, not code or files (that's what Git does). So in order to trigger a state change in the infrastructure, we created a special bucket in GCS to house the zip folders of the code files of all cloud functions. This bucket & all subfolders are managed/tracked by terraform.
 >
-> This means that while terraform can't track changes in the files of those sub-folders, it can track change that a new file was added.
+> This means that while terraform can't track changes in the files of those sub-folders, it can track the change that a new file was added.
 >
 > Through this mechanism, terraform is able to recognize a state change and then re-deploy the cloud function with the latest code changes.
