@@ -77,8 +77,9 @@ id12 --> id16
 ```
 
 ## Extra Details In Flowchart
-1. A google plx trix is setup to pull the activations data into a google sheet every week on Tuesday.
-2. A google app script is used to extract the data from the plx trix to be stored in GCS as well as used to fire off the pipeline. Any new file added into the `raw` subfolders of the `activationz` bucket is what is used to trigger a pipeline run.
+
+1. A Google Plx Trix is setup to pull the activations data into a google sheet every week on Tuesday.
+2. A Google App Script is used to extract the data from the Plx Trix which will be stored in GCS as well as be used to fire off the pipeline. Any new file added into the `raw` subfolders of the `activationz` bucket is what is used to trigger a pipeline run.
 3. Once the new data from GCS is imported into the Mage pipeline, we also import the seen weeks of the activations data from the table `silver_layer.activations_seen_weeks`. By doing this, we avoid we avoid duplicate records and make sure that each pipeline run contains new data.
 4. We than aggregate the data up from the postal code data to the city level as it allows to create a unique id (`uid`) for our data. There are too many empty and null field in the postal code data to make that level of granularity meaningful.
 5. We then import state names and their long form from the `silver_layer.state_name_abbreviation` table in BigQuery. The aggregated data from the previous step is joined with this table using a `LEFT JOIN` on each datasets corresponding `state` columns. The result is a dataset that preserves the aggregated data from the previous step while adding columns from the `state_name_abbreviation` where states match.

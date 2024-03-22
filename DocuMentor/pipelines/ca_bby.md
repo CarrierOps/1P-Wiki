@@ -82,10 +82,11 @@ id12 --> id16
 
 ```
 ## Extra Details In Flowchart
-1. A google plx trix is setup to pull the BBY CA sellout data into a google sheet every week on Tuesday.
-2. A google app script is used to extract the data from the plx trix to be stored in GCS as well as used to fire off the pipeline. Any new file added into the `raw` subfolders of the `sell-through` bucket is what is used to trigger a pipeline run.
+
+1. A Google Plx Trix is setup to pull the BBY CA sellout data into a google sheet every week on Tuesday.
+2. A google app script is used to extract the data from the Plx Trix which will be stored in GCS as well as be used to fire off the pipeline. Any new file added into the `raw` subfolders of the `sell-through` bucket is what is used to trigger a pipeline run.
 3. Once the new data from GCS is imported into the Mage pipeline, we also import the seen weeks of the BBY CA sales data from the table `silver_layer.bby_sellout_seen_weeks`. By doing this, we avoid we avoid duplicate records and make sure that each pipeline run contains new data.
-4. We then filter the data to leave out incomplete weeks or more specifically dates that are greater or equal to 7 days from the GCS file creation. We want a weeks worth of data only to keep consistency when doing week over week comparisons.
+4. We then filter the data to leave out incomplete weeks or more specifically dates that are greater or equal to 7 days from the GCS file creation. We want a weeks worth of data to keep consistency when doing week over week comparisons.
 5. The columns from the BBY CA Sellout data are then converted to snake case and then filtered to only the needed columns.
 6. The BBY CA Sellout data is then joined with the `google_to_esri_city_mapping` table from BigQuery using a `LEFT JOIN` on their corresponding `google_city` columns. `esri_city` is joined in from the `google_to_esri_city_mapping` table. The `city_state` column in then removed. The `uid` column is then created by concatenating the `week_start_date`,`ice_store_id`, and `product_line` columns.
 7. The schema is then validated for proper structure and data types.

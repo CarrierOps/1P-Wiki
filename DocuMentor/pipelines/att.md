@@ -6,7 +6,7 @@ The ATT pipeline takes data from a Google Sheet and brings that data into BigQue
 
 **12pm EST - 3pm EST**
 
-The pipeline is scheduled to run every Tuesday from within the range of 12pm ~ 3pm EST. Since the data that gets updated is done manually, and is not done on a set schedule, the att pipeline run will vary until we see that the new data is in. Note that this is not the case for the other pipelines.
+The pipeline is scheduled to run every Tuesday from within the range of 12pm ~ 3pm EST. Since the data that gets updated is done manually, and is not done on a set schedule, the att pipeline run will vary until we see that the new data is in. **Note that this is not the case for the other pipelines**.
 
 ## Flowchart
 
@@ -159,10 +159,10 @@ id15-->id18
 ## Extra Details In Flowchart
 
 1. New sales data is manually added to a google sheet usually every Tuesday.
-2. A google app script is used to extract the data from the plx trix to be stored in GCS as well as used to fire off the pipeline. Any new file added into the `raw` subfolders of the `sell-through` bucket is what is used to trigger a pipeline run.
+2. A google app script is used to extract the data from the Plx Trix which will be stored in GCS as well as be used to fire off the pipeline. Any new files added into the `raw` subfolders of the `sell-through` bucket is what is used to trigger a pipeline run.
 3. Once the data is imported into the Mage pipeline, we then filter the columns such that all columns are in snake case i.e. snake_case and we are only selecting the columns that we actually need.
 4. Once the new data from GCS is imported into the Mage pipeline, we also import the seen weeks of the activations data from the table `silver_layer.att_daily_sales_seen_weeks`. By doing this, we avoid we avoid duplicate records and make sure that each pipeline run contains new data
-5. Map SKU And Location creates a dictionary of the form {'att_SKU_code': SKU}. The `phone` column is then added to data by mapping the `location_number` to `cp_id`. The tables needed to get this data are `silver_layer.att_location_mapping` and `silver_layer.sku_code_mapping`.
+5. Map SKU And Location creates a dictionary of the form {'att_SKU_code': SKU}. The `phone` column is then added to the data by mapping the `location_number` to `cp_id`. The tables needed to get this data are `silver_layer.att_location_mapping` and `silver_layer.sku_code_mapping`.
 6. The ATT sales data is then merged with the `att_msl` table in BigQuery using a `LEFT JOIN`.
 7. The data is then filtered by removing duplicate `cp_id` and removing null values in the `cp_id` column.
 8. The schema and data types of the sales data are then validated.
