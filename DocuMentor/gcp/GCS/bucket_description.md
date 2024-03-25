@@ -1,6 +1,6 @@
 # GCS Bucket Description
 
-**Note:** The term `bucket` refers to a place where data files are stored. They are the 'top-level' storage containers. You can, for most intents & purposes, think of them as a traditionally folder, that can contain other folders & any type of files, images, videos, etc. If you're coming from Azure, a bucket is a container in blob storage, and if you're coming from AWS,a bucket is the same thing as a bucket in S3.
+**Note:** The term `bucket` refers to a place where data files are stored. They are the `top-level` storage containers. You can, for most intents & purposes, think of them as a traditionally folder, that can contain other folders & any type of files, images, videos, etc. If you're coming from Azure, a bucket is a container in blob storage, and if you're coming from AWS,a bucket is the same thing as a bucket in S3.
 
 ## 1p-advocacy
 
@@ -14,7 +14,7 @@
 ## activationz
 
 - This bucket stores all of the weekly activations sales data.
-- The bucket has subfolders `ca` and `us` indicating which coutry is the sales data referring.
+- The bucket has subfolders `ca` and `us` indicating which country the sales data referring to.
 - The `raw` subfolders indicate that the data is coming from the `Google 1P Sellout And Activations Data` google plx trix.
 - The `clean` subfolders indicate that the data is being exported from the `activations` pipeline.
 
@@ -43,7 +43,7 @@
 
 ## gfa_data
 
-- This bucket stores all of the daily GFA data.
+- This bucket stores all of the daily `GFA` data.
 - The `raw` subfolder indicates that the data is coming from the `Google 1P SF GFA Data` google plx trix.
 - The `clean` subfolder indicates that the data is being exported from the `gfa` pipeline.
 
@@ -65,26 +65,26 @@
 
 ## sell-through
 
-- The bucket contains all of the sales data from Best Buy and ATT.
-- The folder labelled `bby_sellout` contains only BBY sales data and contains folders for `ca` and `us` data.
-- Like in other buckets, the `ca` and `us` subfolders are split into `raw` and `clean` subfolders where the `raw` data comes from the `Google 1P Sellout And Activations Data` google plx trix and the `clean` data comes from the BBY pipeline.
+- The bucket contains all of the sales data from `Best Buy` and `ATT`.
+- The folder labelled `bby_sellout` contains only `BBY` sales data and contains folders for `ca` and `us` data.
+- Like in other buckets, the `ca` and `us` subfolders are split into `raw` and `clean` subfolders where the `raw` data comes from the `Google 1P Sellout And Activations Data` google plx trix and the `clean` data comes from the `BBY `pipeline.
 - The folder labelled `att_daily_sales` contains only att sales data and is split into `raw` and `clean` subfolders.
 
 ## supporting-file
 
-- Stores supporting material from the program.
+- This bucket stores supporting material from the program.
 - Maybe store historical data down the road.
 
 ## tf-infra-states
 
 - We're terraforming Mars.
 - Complicated
-- https://opentofu.org/docs/intro/
+- [Read Through This](https://opentofu.org/docs/intro/)
 
 ## the-beach
 
 - This bucket is the destination bucket for `the-beach-stg` bucket.
-- The primary purpose of this bucket is to trigger the `dispatcher` cloud function which places parquet files into the correct location in GCS.
+- The primary purpose of this bucket is to trigger the `dispatcher` cloud function which places `parquet` files into the correct location in GCS.
 
 ## the-beach-stg
 
