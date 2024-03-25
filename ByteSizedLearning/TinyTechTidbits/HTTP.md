@@ -5,11 +5,12 @@
 HTTP is a set of rules which govern how data is exchanged on the internet. It operates as a request-response protocol in the client-server computing model.
 
 What is a Client? What is a Server?
-
-<figure align="center">
-    <img src="../../imgs/client_server.jpg" width="75%">
-  <figcaption>client-server computing model</figcaption>
-</figure>
+<p align="center">
+    <figure align="center">
+        <img src="../../imgs/client_server.jpg" width="75%">
+    <figcaption>client-server computing model</figcaption>
+    </figure>
+</p>
 
 - **Client**: In the context of HTTP, a client is what requests data. For example, when you use a web browser to visit a website, your browser acts as the client.
 - **Server**: A server, on the other hand, is where the data lives. It responds to the client's request by sending the requested data back. Websites are hosted on servers.
