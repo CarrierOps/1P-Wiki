@@ -118,3 +118,13 @@ Here's a diagram showing the structure of an HTTP request:
     <img src="../../imgs/url_structure.webp" width="85%">
 <figcaption>diagram of an HTTP request</figcaption>
 </figure>
+
+## Additional reading
+
+[Here is](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) a really good read that mirrors what was said in this document
+
+[Here is](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) a list of all HTTP headers.
+
+[Here is](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) a list of all HTTP request methods.
+
+[Here is](https://www.heavy.ai/technical-glossary/client-server#:~:text=The%20client%2Dserver%20model%2C%20or,computer%20network%20or%20the%20Internet.) more info on client-server computing model.
