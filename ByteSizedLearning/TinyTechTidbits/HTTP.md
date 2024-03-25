@@ -7,7 +7,7 @@ HTTP is a set of rules which govern how data is exchanged on the internet. It op
 What is a Client? What is a Server?
 
 <figure align="center">
-    <img src="../../imgs/client_server.jpg" width="95%">
+    <img src="../../imgs/client_server.jpg" width="75%">
   <figcaption>client-server computing model</figcaption>
 </figure>
 
