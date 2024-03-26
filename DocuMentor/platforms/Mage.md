@@ -8,9 +8,49 @@ We use Mage locally to develop/edit pipelines, and we also run a [server on Clou
 
 ## Intro to Mage
 
+This section will walk you though Mage, how to use it, and the main things to know about it.
+
+Mage comes with a UI (user interface) which makes the experience of developing pipelines easier and more enjoyable. You can do everything via the UI or via you're favorite text editor. This guide will only cover using Mage through the UI.
+
+### Home Page
+
+To get started, launch the [Docker instance](#developing-pipelines) then navigate to [localhost:6789](http://localhost:6789/) from your favorite web-browser. You should see the following page:
+
+<figure align="center">
+    <img src="../../imgs/MageUI/mage_home.png" width="85%">
+<figcaption>Mage Home</figcaption>
+</figure>
+
+This is the homepage or landing page. Here's what each main section represents:
+
+<figure align="center">
+    <img src="../../imgs/MageUI/mage_home_more_detail.png" width="85%">
+<figcaption>Main Components of Mage home screen</figcaption>
+</figure>
+
+- **red section**: displays the status of the pipeline runs for the selected time period (succeeded, failed, canceled)
+- **yellow section**: Shows you where you are in the MageUI (navigation helper). You can click on these to navigate back to a given page.
+- **green section**: gives you information about the version you're using and the time (local server time, unless you change in the settings)
+- **blue section**: contains navigation to different parts of Mage. We've numbers the relevant and commonly used sections:
+  - **1**: The landing page/home screen (current page in the screen shot)
+  - **2**: The [pipelines page](#pipelines-page). The page where you can see all your pipelines listed
+  - **3**: The triggers page. Page where all pipeline triggers are listed. 
+  - **4**: the [pipelines run](#pipeline-runs-page) page. This page lists all pipeline runs, successful or not. Let's you access the logs of the run and get more details.
+  - **5** The files page. This page lists all files that power your pipelines & the Mage instance. All your pipelines are just a series of .py files and yaml config files to specify how to string together the .py files. This is where you can see all of these files.
+  - **6**: This opens up a terminal for you to run commands (it is running on a Debian linux machine).
+  - **7**: The [settings page](#settings-page) where can can configure various things.
+
+### pipelines page
+
+### pipeline runs page
+
+### settings page
+
 ## Developing pipelines
 
-- Make you've installed [all the necessary depencies](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/Setting-up-your-computer.md) on your computer.
+
+
+- Make you've installed [all the necessary dependencies](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/Setting-up-your-computer.md) on your computer.
 - If this is your first time working with 1P's pipelines, you'll need to clone the repository, if not skip to the next step
   - From your command line, navigate to where you want to host the code
     - for example, I host it on a folder in my desktop: `C:\Users\thomas.genet\OneDrive - Acosta, Inc\Desktop\Google Carrier\data_infra`
