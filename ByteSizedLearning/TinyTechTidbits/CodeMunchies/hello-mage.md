@@ -10,6 +10,8 @@ We use Mage locally to develop/edit pipelines, and we also run a [server on Clou
 
 This section will walk you though Mage, how to use it, and the main things to know about it.
 
+If you want to know how to launch mage locally, you can [jump to this section](#developing-pipelines)
+
 Mage comes with a UI (user interface) which makes the experience of developing pipelines easier and more enjoyable. You can do everything via the UI or via you're favorite text editor. This guide will only cover using Mage through the UI.
 
 ### Home Page
@@ -17,14 +19,14 @@ Mage comes with a UI (user interface) which makes the experience of developing p
 To get started, launch the [Docker instance](#developing-pipelines) then navigate to [localhost:6789](http://localhost:6789/) from your favorite web-browser. You should see the **following** page:
 
 <figure align="center">
-    <img src="../../imgs/MageUI/mage_home.png" width="85%">
+    <img src="../../../imgs/MageUI/mage_home.png" width="85%">
 <figcaption>Mage Home</figcaption>
 </figure>
 
 This is the homepage or landing page. Here's what each section represents:
 
 <figure align="center">
-    <img src="../../imgs/MageUI/mage_home_more_detail.png" width="85%">
+    <img src="../../../imgs/MageUI/mage_home_more_detail.png" width="85%">
 <figcaption>Main Components of Mage home screen</figcaption>
 </figure>
 
@@ -45,7 +47,7 @@ This is the homepage or landing page. Here's what each section represents:
 The pipeline page contains a list of all the pipelines in your Mage project (table in the center of the page). It also some metadata about each pipeline such as what [kind of pipeline](#different-kind-of-pipelines) it is, when the pipeline was created, when it was last edited, number of blocks in it, etc.
 
 <figure align="center">
-    <img src="../../imgs/MageUI/ppln_page_more_detail.png" width="85%">
+    <img src="../../../imgs/MageUI/ppln_page_more_detail.png" width="85%">
 <figcaption>Pipelines page</figcaption>
 </figure>
 
@@ -61,6 +63,22 @@ To open up a pipeline, you can either double (left) click on the pipeline or cli
 
 ### pipeline runs page
 
+This page gives a overview of all pipeline runs.
+
+<figure align="center">
+    <img src="../../../imgs/MageUI/pipelines_run.png" width="85%">
+<figcaption>Pipelines Run Page</figcaption>
+</figure>
+
+There are a few things to click on to drill down on the view to get more information about a specific run.
+
+If you click on the number in the `Block runs` columns, you will see a page displaying which blocks ran & which failed. You will also be able to access logs of individual blocks and have the option to retry the pipeline from the block(s) that failed. From this page, you can also export the output of individual blocks as CSV files.
+
+<figure align="center">
+    <img src="../../../imgs/MageUI/block runs.png" width="85%">
+<figcaption>Pipelines Run Page</figcaption>
+</figure>
+
 ### settings page
 
 ### individual pipeline page
@@ -70,13 +88,32 @@ To open up a pipeline, you can either double (left) click on the pipeline or cli
 Mage is simply a wrapper around your python (and SQL, R, yaml, markdown) files to tie everything together nicely into a pipeline and be able to access them through a UI. A `Mage Project` is the term used to describe a collection of pipelines (& all files related & relevant to the pipelines), or in other words, the top level folder containing all your pipeline scripts is referred to as a `Mage Project`. This mage project will contain some necessary folders such as `data_loaders`, `transformations`, `data exporters` etc that house script - `data_loaders` will contain scripts that load data from sources (google sheets, other databases, etc) and so on. You can also add your own folders & files to your Mage project to organize it how you like. When [initiating Mage](https://docs.mage.ai/getting-started/setup), it will automatically create all the necessary folders for you. Here is a diagram illustrating this concept:
 
 <figure align="center">
-    <img src="../../imgs/MageUI/Mage concept (1).png" width="85%">
+    <img src="../../../imgs/MageUI/Mage concept (1).png" width="85%">
 <figcaption>Mage Project</figcaption>
 </figure>
 
 Each pipeline in Mage is a sequence of script steps, which can be a mix of Python, SQL, and R, allowing for data to be passed between them. The configuration of a pipeline, including its structure and settings, is delineated in a YAML file located within a specific folder named after the pipeline under the pipelines directory. This is typically named metadata.yaml. Similarly, all pipeline triggers are defined within YAML files, usually named triggers.yaml, and placed in the same folder as the metadata.yaml
 
 ### Different kind of pipelines
+
+There are 3 types of pipelines supported in Mage: Batch, Integration, and Streaming.
+
+- **Batch**: Typical pipelines to process data in batches. Get data from source, apply transformations, write to destination (ETL/ELT type pipelines)
+- **Integration**: No-code version of batch pipelines that are meant to be used to sync data between systems. For example: syncing data between a client's database and our database, or a SaaS application to our Cloud Storage. Integration pipelines are slower at processing data than batch pipelines and offer less flexibility but are a lot easier to use.
+- **Streaming**: Allows you to ingest and transform data in real-time. Accepts incoming streams from various [messaging services](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/pubsub.md#messaging-service), apply in-flight transformations and write to a sink (file storage like GCS, databases like PostgreSQL, or data warehouses like BigQuery).
+
+### Different types of triggers
+
+There are 3 types of triggers: Schedule, Event, API
+
+<figure align="center">
+    <img src="../../../imgs/MageUI/triggertypes.png" width="65%">
+    <figcaption>Mage Project</figcaption>
+</figure>
+
+- **Schedule**: Let you run your pipelines on a set schedule. The schedule can be defined using a [cron expression](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/cron-expressions.md) or presets options using a drop-down menu.
+- **Event**: Let's you trigger pipelines when an event happens in the cloud. Example: a new file is uploaded to storage. Currently only supported for AWS. But this functionality can be mimicked using an API trigger, [pubsub](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/pubsub.md) and a script (cloud function, cloud run, etc).
+- **API**: This creates an API endpoint which accepts a [POST request](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/HTTP.md#method). When a request is made to this endpoint, the pipeline is ran. Data it passed along with the POST request and is used to edit runtime variables.
 
 ## Developing pipelines
 
