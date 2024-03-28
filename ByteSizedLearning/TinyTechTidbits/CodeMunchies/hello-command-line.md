@@ -78,3 +78,36 @@ For a full list of all core Linux commands, [check out this page](https://ss64.c
 > **Note**
 >
 > Different linux distros will have their own unique commands. These are more specific to package management, system services, config tools, etc. The core linux commands will more than always likely be the same across all distros.
+
+## Understanding Flags, Arguments, and Command Chaining
+
+Commands in both Windows Command Prompt and Linux terminals are not just standalone instructions; they can be modified and extended through the use of flags and arguments. Additionally, multiple commands can be chained together to perform complex tasks efficiently. Understanding these concepts is crucial for leveraging the full power of the command line.
+
+### Flags and Arguments
+
+**Flags** (also known as options or switches) modify the behavior of a command. Flags usually precede arguments and are prefixed with a hyphen (`-`) in Linux and a slash (`/`) in Windows Command Prompt. They can control the output's detail level, set specific operation modes, or alter the command's default behavior.
+
+
+- **Linux Example**: `ls -l /home` lists the contents of the `/home` directory in long format, showing detailed information.
+- **Command Prompt Example**: `dir /B` lists the files and directories in the current directory in a bare format, showing only names.
+
+**Arguments** are the targets or inputs for commands, such as filenames, user names, or paths. They tell the command what resource to act upon.
+
+- **Linux Example**: In `cp file1.txt file2.txt`, `file1.txt` and `file2.txt` are arguments specifying the source and destination of the copy operation.
+- **Command Prompt Example**: In `move file1.txt D:\Documents\`, `file1.txt` and `D:\Documents\` are arguments specifying the file to move and the destination folder.
+  
+In general commands (both on Linux & command Command Prompt) have the following general structure:
+
+```Bash
+command [options/flags] [arguments]
+```
+
+### Command Chaining
+
+Both environments allow for **command chaining**, where the output of one command serves as the input to another, or commands are executed sequentially. This allows for powerful one-liners that can perform complex operations.
+
+- **Linux**: Commands can be chained using pipes (`|`), allowing the output of one command to be passed as input to another. Logical operators such as `&&` (execute the next command if the previous succeeded) and `;` (execute commands sequentially regardless of success) are also used.
+  - Example: `grep 'pattern' file.txt | wc -l` counts the number of lines in `file.txt` that match 'pattern'.
+
+- **Command Prompt**: Similar to Linux, Command Prompt uses the pipe (`|`) and the `&&` operator. The `&` operator is used to execute commands sequentially regardless of success.
+  - Example: `dir /B | findstr "example"` lists files and directories that contain "example" in their names.
