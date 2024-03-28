@@ -1,16 +1,16 @@
 # Mage
 
-Mage is the platform we use to develop & run our data pipelines. It is an orchestration tool. Pipelines is made up of multiple steps (cleaning, filtering, formatting, joining, etc). Mage is the glue between all these steps - it allows us to define in which order each step should run, and pass data between steps. It always us to create pipelines from individual steps.
+Mage is the platform we use to develop & run our data pipelines. It is an orchestration tool. Pipelines are made up of multiple steps (cleaning, filtering, formatting, joining, etc). Mage is the glue between all these steps - it allows us to define in which order each step should happen, and pass data between steps. It always us to create pipelines from individual steps.
 
-As an orchestrator, Mage allows us to do a lot more than just creating pipelines. It provides us with a mechanism to trigger these pipelines (via a set schedule or on demand via an API), logging, monitoring, lineage, observability, scalability (i.e. Resource Management), error handling & Recovery, and dependency management.
+As an orchestrator, Mage lets us to do a lot more than just creating pipelines. It provides us with a mechanism to trigger these pipelines, logging, monitoring, lineage, observability, scalability (i.e. Resource Management), error handling & Recovery, and dependency management.
 
-We use Mage locally to develop/edit pipelines, and we also run a [server on Cloud Run](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/Cloud-Run/dwh-pipelines.md) as our production server that takes care of all data power our reporting & analytical needs.
+We use Mage locally to develop/edit pipelines, and we also run a [server on Cloud Run](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/Cloud-Run/dwh-pipelines.md) as our [production server](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/dev-prod.md) that takes care of all data needed for our reporting & analytical needs.
 
 ## Intro to Mage
 
 This section will walk you though Mage, how to use it, and the main things to know about it.
 
-If you want to know how to launch mage locally, you can [jump to this section](#developing-pipelines)
+If you want to know how to launch mage locally, you can [jump to this section](#developing-pipelines).
 
 Mage comes with a UI (user interface) which makes the experience of developing pipelines easier and more enjoyable. You can do everything via the UI or via you're favorite text editor. This guide will only cover using Mage through the UI.
 
@@ -23,7 +23,7 @@ To get started, launch the [Docker instance](#developing-pipelines) then navigat
 <figcaption>Mage Home</figcaption>
 </figure>
 
-This is the homepage or landing page. Here's what each section represents:
+This is the homepage or landing page. Here a some of the important, most used things on the home page:
 
 <figure align="center">
     <img src="../../../imgs/MageUI/mage_home_more_detail.png" width="85%">
@@ -41,6 +41,12 @@ This is the homepage or landing page. Here's what each section represents:
   - **5** The files page. This page lists all files that power your pipelines & the Mage instance. All your pipelines are just a series of .py files and yaml config files to specify how to string together the .py files. This is where you can see all of these files.
   - **6**: This opens up a terminal for you to run commands (it is running on a Debian linux machine).
   - **7**: The [settings page](#settings-page) where can can configure various things.
+
+To create pipeline a pipeline you can click on the blue & purple button labeled `+ New pipeline`. To see or edit existing pipelines, you can click on the [pipelines page](#pipelines-page) then again on the pipeline you want to see. This will bring you to that particular pipeline's page. From there you can go the `Edit pipeline` page to start working on pipeline.
+
+When you're done creating a pipeline, you can create a trigger for it by going to the pipeline's trigger page and clicking on `New trigger`.
+
+When you're ready to push your pipeline to production, you can push your changes to the dev branch on GitHub, then open up a Pull Request to main.
 
 ### pipelines page
 
