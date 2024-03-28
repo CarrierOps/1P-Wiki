@@ -10,8 +10,71 @@ Unlike the GUI, which simplifies interaction by visualizing the computer's file 
 
 The list of commands you can run will depend entirely on your operating system, and commands from one OS to the next may be widely different (think windows vs linux).
 
-This tutorial will highlight some basic and useful command for the Windows command prompt, as well as some linux commands.
+This tutorial will highlight some basic and useful command for the [Windows command prompt](#windows-command-prompt), as well as some [linux commands](#linux).
 
 ## Windows Command Prompt
 
+> **Note:**
+> 
+> All file and folder paths in the commands use relative paths, so the path is relative to your current location.
+
+- **`cd`**: Outputs your current path.
+- **`cd {folder_name}`**: Navigates to the specified folder.
+- **`cd ..`**: Navigates back one folder.
+- **`dir`**: Outputs all files and folders in your current directory.
+- **`del {file_name}`**: Deletes the specified file.
+- **`rmdir {folder_name}`**: Deletes the specified folder. The folder must be empty.
+- **`rmdir /S {folder_name}`**: Deletes the specified folder and everything in it.
+- **`mkdir {folder_name}`**: Creates a new folder with the specified name.
+- **`more {file_name}`**: Outputs the content of the specified file.
+- **`move {original_location} {target_location}`**: Moves a file to a new location (can also be used to rename a file).
+- **`ren "old_name" "new_name"`**: Renames a file.
+- **`set`**: Lists all environment variables.
+- **`set varName=varValue`**: Sets a new environment variable.
+- **`fc {file_1} {file_2}`**: Shows the difference between two files.
+- **`start .`**: Opens a new File Explorer window at the current file path.
+- **`for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear`**: Shows all Wi-Fi passwords saved on your computer.
+- **`code .`**: Opens Visual Studio Code at your current location.
+- **`code`**: Opens Visual Studio Code with no files or directories open.
+
+You can find a list of all available commands [here](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd)
+
 ## Linux
+
+
+
+> **Note:**
+> 
+> All file and directory paths in the commands use relative paths unless specified otherwise, making the path relative to your current location.
+
+- **`pwd`**: Prints the current directory path.
+- **`cd {directory_name}`**: Changes the current directory to the specified directory.
+- **`cd ..`**: Moves up one directory level.
+- **`ls`**: Lists all files and directories in the current directory.
+- **`man {command}`**: Displays the manual page for the specified command, providing detailed information on its usage.
+- **`rm {file_name}`**: Deletes the specified file.
+- **`rmdir {directory_name}`**: Deletes the specified directory. The directory must be empty.
+- **`rm -r {directory_name}`**: Deletes the specified directory and all of its contents.
+- **`mkdir {directory_name}`**: Creates a new directory with the specified name.
+- **`cat {file_name}`**: Displays the content of the specified file.
+- **`mv {source} {destination}`**: Moves or renames a file or directory.
+- **`cp {source} {destination}`**: Copies a file or directory.
+- **`echo "text"`**: Displays the specified text.
+- **`export VARIABLE_NAME=value`**: Sets a new environment variable.
+- **`grep "text" {file_name}`**: Searches for the specified text within a file.
+- **`find {directory} -name {file_name}`**: Searches for files within a directory hierarchy.
+- **`chmod {permissions} {file_name}`**: Changes the permissions of a file or directory.
+- **`sudo {command}`**: Executes a command with superuser privileges.
+- **`apt-get install {package_name}`**: Installs a new package (Debian-based systems).
+- **`nano {file_name}`**: Opens the specified file in the nano text editor.
+- **`vi {file_name}`**: Opens the specified file in the vi text editor.
+  - Use neovim, don't be weak!
+- **`top`**: Displays running processes and their system resource usage.
+- **`ps`**: Displays currently running processes.
+- **`kill {process_id}`**: Terminates the specified process.
+
+For a full list of all core Linux commands, [check out this page](https://ss64.com/bash/)
+
+> **Note**
+>
+> Different linux distros will have their own unique commands. These are more specific to package management, system services, config tools, etc. The core linux commands will more than always likely be the same across all distros.
