@@ -22,10 +22,6 @@ Once you've navigated to the starting screen,here are some of the following thin
 
 
 
-
-### Resources SideBar
-
-
 <figure align="center">
     <img src="../../../imgs/Hello-BQ/BigQuery Resources.png" width="100%">
   <figcaption>Resources Side Bar</figcaption>
