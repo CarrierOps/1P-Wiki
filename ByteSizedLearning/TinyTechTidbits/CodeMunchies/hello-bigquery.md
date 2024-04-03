@@ -56,14 +56,45 @@ In the BigQuery editor, you should see a + sign. If you click on this it will op
   <figcaption>Getting Ready To Write A Query</figcaption>
 </figure>
 
-Doing so will
+Doing so will lead you to a blank editor that looks like the following. This is where you can start writing your SQL queries.
 
 <figure align="center">
     <img src="../../../imgs/Hello-BQ/Empty Editor BigQuery.png" width="100%">
   <figcaption>Writing A Query In BigQuery</figcaption>
 </figure>
 
+Here is a simple sample query I ran using the table `raw_customers` in a previous figure.
+
+<figure align="center">
+    <img src="../../../imgs/Hello-BQ/Sample Query With Results.png" width="100%">
+  <figcaption>Sample Query With Results</figcaption>
+</figure>
+
+After writing your SQL query, click on the blue run button to run that query. After it finishes running, you'll see the results from that query in the query results section at the bottom of the screen.
 
 
+## Viewing your Query Results In Different Tools
 
+If you want to view your query results in a differt place, tool, or file format, you the options to do so in using the ***Save Results*** and ***Explore Data*** tabs in the query results section.
+
+
+<figure align="center">
+    <img src="../../../imgs/Hello-BQ/Exporting and Viewing Data.png" width="100%">
+  <figcaption>Exporting And Viewing Options</figcaption>
+</figure>
+
+If you click the save results button, you will get the following popup which will allow you to save your query in whatever file format you given a variety of options. The two most common options to export data are in the `csv` or `google sheets` format.
+
+<figure align="center">
+    <img src="../../../imgs/Hello-BQ/Exporting Options In BigQuery.png" width="100%">
+  <figcaption>Exporting Options In BigQuery</figcaption>
+</figure>
+
+
+You can also choose to connect your data directly to tools such as google sheets and or looker studio which can be very easy and convenient to get a better look at the data  that you queried.
+
+<figure align="center">
+    <img src="../../../imgs/Hello-BQ/Exploring Data Options In BigQuery.png" width="100%">
+  <figcaption>Exporting Options In BigQuery</figcaption>
+</figure>
 
