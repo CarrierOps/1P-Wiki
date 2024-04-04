@@ -59,7 +59,7 @@ In the BigQuery editor, you should see a + sign. If you click on this it will op
 Doing so will lead you to a blank editor that looks like the following. This is where you can start writing your SQL queries.
 
 <figure align="center">
-    <img src="../../../imgs/Hello-BQ/Empty Editor BigQuery.png" width="100%">
+    <img src="../../../imgs/Hello-BQ/Empty Editor BigQuery.png" height ="75%">
   <figcaption>Writing A Query In BigQuery</figcaption>
 </figure>
 
