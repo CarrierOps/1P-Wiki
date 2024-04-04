@@ -23,7 +23,7 @@ Once you've navigated to the starting screen,here are some of the following thin
 
 
 <figure align="center">
-    <img src="../../../imgs/Hello-BQ/BigQuery Resources.png" width="100%">
+    <img src="../../../imgs/Hello-BQ/BigQuery Resources.png" height ="50%">
   <figcaption>Resources Side Bar</figcaption>
 </figure>
 
