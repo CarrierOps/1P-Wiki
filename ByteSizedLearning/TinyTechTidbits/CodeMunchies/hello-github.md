@@ -1,8 +1,18 @@
 # Getting Started With GitHub
 
-## Push And Pull
+# Intro paragraph
+
+Then common basic commands
+
+ Push And Pull, add, commit, clone, status, branch, clean
 
 
-## Cloning
+# Github Actions
 
-## Github Actions
+# More advanced later
+
+
+# Branching Section
+
+
+

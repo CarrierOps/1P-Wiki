@@ -17,7 +17,7 @@ This Cloud Function is event-driven; it is triggered & run whenever a new file i
 
 ## Development Operations
 
-This section has 2 sub-sections. The [first one](#editing-the-python-code) walks you through how to edit the python code that is run on Cloud Function. The [second one](#deployment) gives a high-level overview of how the deployment of the code to Cloud Function/GCP works
+This section has 2 sub-sections. The [first one](#editing-the-python-code) walks you through how to edit the python code that is run on Cloud Function. The [second one](#deployment) gives a high-level overview of how the deployment of the code to Cloud Function/GCP works.
 
 ### Editing the python code
 
