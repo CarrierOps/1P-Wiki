@@ -1,3 +1,3 @@
 # NEG
 
-Most of our applications run on [cloud run ]() which is a [serverless]() service. Traditionally, load balancers would direct traffic from to an instance of the application. But containers can scale and have multiple instances, that's where NEG enters the picture. NEG enables us to takes a leap from instance based load balancing to service based load balancers
+Most of our applications run on [cloud run ](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/Cloud-Run.md) which is a [serverless](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/server-vs-serverless.md) service. Traditionally, load balancers would direct traffic from to an instance of the application. But containers can scale and have multiple instances, that's where NEG enters the picture. NEG enables us to takes a leap from instance based load balancing to service based load balancers.

@@ -2,14 +2,14 @@
 
 ## Getting To The Starting Screen
 
-Once you get access to project related to your program, in the top search bar of wherever you are currently in the Google Cloud Platform, type BigQuery and click the BigQuery Link that comes up.
+Once you get access to the project related to your program, in the top search bar of wherever you are currently in the Google Cloud Platform, type BigQuery and click the BigQuery Link that comes up.
 
 <figure align="center">
     <img src="../../../imgs/Hello-BQ/Getting to BigQuery.png" width="100%">
   <figcaption>Getting To BigQuery</figcaption>
 </figure>
 
-After clicking the link above, you will be taken to the following page as seen in the image labelled _**BigQuery Starting Page**_. You can call this page the editor or workspace in BigQuery.
+After clicking the link above, you will be taken to the following page as seen in the _figure_ labelled _**BigQuery Starting Page**_. You can call this page the editor or workspace in BigQuery.
 
 <figure align="center">
     <img src="../../../imgs/Hello-BQ/BigQuery Intro Screen.png" width="100%">
@@ -18,7 +18,7 @@ After clicking the link above, you will be taken to the following page as seen i
 
 ## Exploring Tables In BigQuery
 
-Once you've navigated to the starting screen,here are some of the following things you can do to get started and learn how to use and navigate BigQuery.
+Once you've navigated to the starting screen, here are some of the following things you can do to get started and learn how to use and navigate BigQuery.
 
 
 
@@ -27,7 +27,7 @@ Once you've navigated to the starting screen,here are some of the following thin
   <figcaption>Resources Side Bar</figcaption>
 </figure>
 
-If you click on the arrow beside programs project name, you can see an expanded view of the resources in the project. You can think of these as folders in a traditional file system, but instead of storing files, we are store tables of data. You can further explore what tables and data is in each folder by clicking on the arrow beside each folder as seen in the ***Exploring Tables In BigQuery*** figure.
+If you click on the arrow beside programs project name, you can see an expanded view of the resources in the project. You can think of these as folders in a traditional file system, but instead of storing files, we are store tables of data. You can further explore what tables and data are in each folder by clicking on the arrow beside each folder as seen in the ***Exploring Tables In BigQuery*** figure.
 
 
 <figure align="center">
@@ -63,7 +63,7 @@ Doing so will lead you to a blank editor that looks like the following. This is 
   <figcaption>Writing A Query In BigQuery</figcaption>
 </figure>
 
-Here is a simple sample query I ran using the table `raw_customers` in a previous figure.
+Here is a simple sample query I ran using the table `raw_customers` as seen in the _**Getting Ready To Write A Query**_  _figure_.
 
 <figure align="center">
     <img src="../../../imgs/Hello-BQ/Sample Query With Results.png" width="100%">
@@ -75,7 +75,7 @@ After writing your SQL query, click on the blue run button to run that query. Af
 
 ## Viewing your Query Results In Different Tools
 
-If you want to view your query results in a differt place, tool, or file format, you the options to do so in using the ***Save Results*** and ***Explore Data*** tabs in the query results section.
+If you want to view your query results in a different place, tool, or file format, you have the options to do so using the ***Save Results*** and ***Explore Data*** tabs in the query results section.
 
 
 <figure align="center">
@@ -97,4 +97,7 @@ You can also choose to connect your data directly to tools such as google sheets
     <img src="../../../imgs/Hello-BQ/Exploring Data Options In BigQuery.png" width="100%">
   <figcaption>Exporting Options In BigQuery</figcaption>
 </figure>
+
+
+**Note**: If you are unfamiliar with SQL, please visit the [hello-sql](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-sql.md) document for more details.
 

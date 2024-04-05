@@ -8,7 +8,7 @@ What is a Client? What is a Server?
 
 <figure align="center">
     <img src="../../imgs/client_server.jpg" width="75%">
-<figcaption>client-server computing model</figcaption>
+<figcaption>Client-Server Computing Model</figcaption>
 </figure>
 
 - **Client**: In the context of HTTP, a client is what requests data. For example, when you use a web browser to visit a website, your browser acts as the client.
@@ -36,15 +36,14 @@ HTTP requests are made to servers identified by URLs. The server could be anythi
 
 HTTP headers are key-value pairs sent between clients and servers as part of HTTP requests and responses. They provide essential information about the transaction, such as details about the client or server, the content being transferred, how the content should be handled, and any conditions or parameters that should be applied to the transaction. Headers are sent with the request, but also with the response. Here are some example of headers that are commonly used:
 
-- HTTP Version
+- HTTP Version:
   This specifies the HTTP version used in the request, such as HTTP/1.1 or HTTP/2. Each version has different capabilities and features.
 - Host: The domain name of the server (required in HTTP/1.1).
 - Content-Type: The media type of the body of the request (e.g., application/json, text/html).
 - User-Agent: Information about the client making the request.
 - Authorization: Credentials for authenticating the client to the server.
-- Accept: The media types that the client is willing to receive from the server. 5. Body
-
-Not all requests have a body. Bodies are primarily used with POST and PUT requests to send data to the server. The body of an HTTP request can contain data in various formats, such as JSON, XML, or plain text, depending on what the server accepts and what the request is trying to accomplish.
+- Accept: The media types that the client is willing to receive from the server.
+-  Body: Not all requests have a body. Bodies are primarily used with POST and PUT requests to send data to the server. The body of an HTTP request can contain data in various formats, such as JSON, XML, or plain text, depending on what the server accepts and what the request is trying to accomplish.
 
 ### HTTP request example
 
@@ -63,7 +62,7 @@ Connection: keep-alive
 - The **User-Agent header** identifies the client software making the request to the server.
 - The **Accept header** specifies the media types that the client is willing to receive from the server.
 - The **Accept-Language header** indicates the client’s preferred languages.
-  -The **Connection header** specifies options that are desired for the particular connection and can signal that the connection should be kept open for further requests.
+- The **Connection header** specifies options that are desired for the particular connection and can signal that the connection should be kept open for further requests.
 
 A typical response to this HTTP request may look like this:
 
@@ -107,7 +106,7 @@ Content-Encoding: gzip
   - Content-Encoding: Specifies that the content is compressed with gzip.
   - Body: The HTML content of the response, which is what the browser will render. This includes a basic HTML structure with a heading and a paragraph.
 
-This example of an HTTP request + response mimics what goes on behind the scenes when you access `example.com` (made up example) - you make a GET request to the server identified with `example.com` and it returns a webpage (HTML)
+This example of an HTTP request + response mimics what goes on behind the scenes when you access `example.com` (made up example) - you make a GET request to the server identified with `example.com` and it returns a webpage (HTML).
 
 - This request can be made from the browser, so when you type `example.com` in the address bar, in which case you'll see the `example.com` page show up (your browser will render the HTML, CSS, & Javascript).
 - Or you could have made this HTTP request from a script, in which case you would've simple gotten a text response containing the HTML of that webpage.
@@ -116,12 +115,12 @@ Here's a diagram showing the structure of an HTTP request:
 
 <figure align="center">
     <img src="../../imgs/url_structure.webp" width="85%">
-<figcaption>diagram of an HTTP request</figcaption>
+<figcaption>Diagram Of An HTTP Request</figcaption>
 </figure>
 
 ## Additional reading
 
-[Here is](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) a really good read that mirrors what was said in this document
+[Here is](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) a really good read that mirrors what was said in this document.
 
 [Here is](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) a list of all HTTP headers.
 

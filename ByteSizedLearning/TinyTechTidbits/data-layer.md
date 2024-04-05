@@ -13,13 +13,13 @@ By organizing data processing into distinct layers, the medallion architecture s
 
 The bronze layer is the foundation of our data architecture, acting as the initial repository for raw data. Data in this layer is collected from various sources, including surveys (e.g., GFA, S123), reference files (e.g., MSL, location mappings), and other external or internal data streams. At this stage, data remains in its original form, untouched and unprocessed, ensuring that we have a faithful capture of the source information for auditing, traceability, and compliance purposes.
 
-Data in this layer lives entirely in our data lake on [GCS](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/GCS/bucket_description.md)
+Data in this layer lives entirely in our data lake on [GCS](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/GCS/bucket_description.md).
 
 ## Silver Layer (Cleaned/Curated Data)
 
 Data progresses to the silver layer after undergoing initial cleaning and curation processes. Here, we perform essential quality checks, remove duplicates, correct errors, and standardize formats. This layer serves as a centralized repository for cleaned data that is harmonized from different sources, making it more reliable and consistent for further processing. The aim is to create a trusted & reliable dataset that serves as the base for any reporting & analytics.
 
-Data in this layer primarily in [BigQuery](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/BigQuery/bigquery.md), but a copy of the cleaned data is also stored in the data lake for archiving
+Data in this layer primarily in [BigQuery](https://github.com/CarrierOps/1P-Wiki/blob/main/DocuMentor/gcp/BigQuery/bigquery.md), but a copy of the cleaned data is also stored in the data lake for archiving.
 
 ## Gold Layer (Modeled, Transformed, Aggregated Data)
 
