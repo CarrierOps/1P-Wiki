@@ -1,8 +1,9 @@
-#
+# Getting Started With GCP
 
 -Intro on cloud
--using computers at their data centers worldwide.
--services such as BQ, hosting
+    -what is it
+    -using computers at their data centers worldwide.
+    -services such as BQ, hosting
 
 -Home Screen
 -Console
