@@ -66,12 +66,21 @@ The `-m ` indicates that message is following after. It's always best practice t
 
 `git branch`: This command tells you what branch you are currently on in your repository. Please read the **Importance Of Branching** section to understand branches and how to check which branch you on are. To quickly check which branch you are currently on, use the following command.
 
-**ex)** `git branch`
+**ex:** `git branch`
 
 
-`git clean`: This command allows you to remove specific changes or files that you added and do not want to have pushed to GitHub.
+`git clean`: This command allows you to remove specific changes or files that you added and do not want to have pushed to GitHub. There are a lot of different variations of this command. To see all of them, click [here](https://git-scm.com/docs/git-clean) 👀. A good starter one would be the interactive variation command. 
+**ex:** `git clean -i`
 
-`git restore`: This command allows you to restore back to the latest version of the repository that you had by reverting back all changes made. This is very useful for making quick edits to a code for testing purpose but not wanting to have those changes present in the repository.
+**Note:** You may have to use different variations depending on the situation.
+
+`git restore`: This command allows you to restore back to the latest version of the repository that you had by reverting back all changes made. This is very useful for making quick edits to a code for testing purpose but not wanting to have those changes present in the repository. As an example, if you wanted to restore this exact file to the point before any changes were made, you could use the following command.
+
+**ex:** 
+`git restore ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md`
+
+**Pro Tip 😎:** Use `git restore .` to restore all changes made to the repository if you need to restore every back to what they were before.
+
 
 
 ## Importance Of Branching
