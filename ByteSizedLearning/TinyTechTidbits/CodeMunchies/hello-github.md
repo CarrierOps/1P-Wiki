@@ -84,6 +84,8 @@ The `-m ` indicates that message is following after. It's always best practice t
 
 
 ## Importance Of Branching
+A `branch` in GitHub is in really simple terms, another copy of the repository. Branches are very important however, as it allows us develop independently of other branches. This is very useful as lets us develop, fix bugs, and add new features while keeping the functionality of the main branch active. Here's analogy of why branching is important. Lets say you have a cookie company 🍪, and customers really like your cookies. However, you want to try and experiment and try out some new flavours/ideas with your cookies. As a good cookie company owner, you won't apply these changes to your products immediately as you would probably want people to test your new cookie ideas before sending them out to the market. This is the same idea with code and branches. You want your `main` or `prod`(production branch) always working well, but you can experiment and fix things in the `dev`(developer branch) or other sub-branches. 
+
 
 ## Github Actions
 
