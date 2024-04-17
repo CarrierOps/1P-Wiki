@@ -1,5 +1,7 @@
 # Getting Started With The Command line
 
+**How to open command prompt**
+ 
  Computers are just machines that only understand 0s and 1s. So then how come you can do things on your computer through a nifty graphical user interface (GUI) - how come you can use your mouse to open programs and do things and instead of having to type in a series of 0s and 1s?
 
 The answer lies in the various layers of abstraction that exist between the binary zeros and ones and the GUIs. These layers translate our interactions into instructions that the computer's hardware can execute. Among these layers, one of the most pivotal is the command line interface (CLI).

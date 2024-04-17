@@ -24,19 +24,19 @@ When first getting started on GCP, the first thing you will most likely see is t
 </figure>
 
 Here you can navigate to a variety of different services hosted on the Cloud by clicking on the appropriate box as seen in the diagram above.
-
-
+**Note**: There are over a 100 services on GCP, but here are the main ones we use.
 For further explanations, please click on the following links to get a more comprehensive understanding of the services.
 
-[BigQuery](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-bigquery.md)
+- [BigQuery](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-bigquery.md): The Data Warehouse hosted on GCP.
 
 
-[Google Cloud Storage]()
+- [Google Cloud Storage](): The Data Lake hosted on GCP.
 
+- [Pub Sub](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/pubsub.md): The messaging service hosted on GCP.
 
-[Pub Sub](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/pubsub.md)
+- [IAM And Admin](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/IAM.md): The service used to manage users and manage access to everything in GCP.
 
-[Iam And Admin]()
-
-
+- [Cloud Run](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/Cloud-Run.md):
+  
+- [Cloud Functions](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/Cloud-Functions.md):
 
