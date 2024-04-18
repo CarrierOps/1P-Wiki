@@ -1,6 +1,5 @@
 # Getting Started With The Command line
 
-**How to open command prompt**
  
  Computers are just machines that only understand 0s and 1s. So then how come you can do things on your computer through a nifty graphical user interface (GUI) - how come you can use your mouse to open programs and do things and instead of having to type in a series of 0s and 1s?
 
@@ -13,6 +12,23 @@ Unlike the GUI, which simplifies interaction by visualizing the computer's file 
 The list of commands you can run will depend entirely on your operating system, and commands from one OS to the next may be widely different (think windows vs linux).
 
 This tutorial will highlight some basic and useful command for the [Windows command prompt](#windows-command-prompt), as well as some [linux commands](#linux).
+
+
+## How To Open The Command Prompt
+
+1. Type cmd in the windows search bar and then click open.
+2. Do the same steps as in 1. , but click pin to task bar. This will allow you to click on the command prompt to open it really quickly.
+<figure align="center">
+    <img src="../../../imgs/Command Prompt On The Task Bar.png" width="100%">
+  <figcaption>Command Prompt On The Task Bar</figcaption>
+</figure>
+
+3. Navigate to anywhere you want in the file explore, and it the top search bar, click on it and type in cmd.
+<figure align="center">
+    <img src="../../../imgs/Command Prompt From File Explorer.png" width="100%">
+  <figcaption>Command Prompt From File Explorer</figcaption>
+</figure> 
+
 
 ## Windows Command Prompt
 

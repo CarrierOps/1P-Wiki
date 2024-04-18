@@ -1,16 +1,5 @@
 # Getting Started With GCP
 
--Intro on cloud
-    -what is it
-    -using computers at their data centers worldwide.
-    -services such as BQ, hosting
-
--Home Screen
--Console
--Cloud Storage
--Cloud Run
--Cloud functions
--Pub sub
 
 ## What Is The Cloud?
 The Cloud is essentially a global network of servers which are connected and operate as a single ecosystem. These servers can provide functions such as storing and managing data(Google Cloud Storage), running applications/services such as BigQuery, along with many other uses.
@@ -36,7 +25,7 @@ For further explanations, please click on the following links to get a more comp
 
 - [IAM And Admin](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/IAM.md): The service used to manage users and manage access to everything in GCP.
 
-- [Cloud Run](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/Cloud-Run.md):
+- [Cloud Run](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/Cloud-Run.md): Allows you to run your code directly on top of Google’s scalable infrastructure.
   
-- [Cloud Functions](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/Cloud-Functions.md):
+- [Cloud Functions](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/Cloud-Functions.md): This allows you to run code/function in the cloud.
 
