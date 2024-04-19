@@ -44,7 +44,7 @@ All items with an asterisk require IT to install.
 
 ### git
 
-Go to [this link](https://git-scm.com/download/win) and download '64-bit Git for Windows Setup.'. This will download an .exe, run it once the download is finish. This will run you through the installation of git as well ask you about configuration preferences. You can leave everything set as the default option (you can always change your settings later).
+Go to [this link](https://git-scm.com/download/win) and download '64-bit Git for Windows Setup.'. This will download a .exe, run it once the download is finish. This will run you through the installation of git as well ask you about configuration preferences. You can leave everything set as the default option (you can always change your settings later).
 
 Once installed, you can check 2 things.
 
@@ -58,7 +58,7 @@ Once installed, you can check 2 things.
 ### gcloud
 
 1. Navigate to [this website](https://cloud.google.com/sdk/docs/install)
-2. go to the Windows section and click on 'gcloud cli installer': ![](../../imgs/gcloud_windows.png)
+2. Go to the Windows section and click on 'gcloud cli installer': ![](../../imgs/gcloud_windows.png)
 3. Run the .exe file downloaded in the previous step. It may take a while for the installation to complete, don't worry
 
 To verify that the installation worked, run the command `gcloud --version`. You should see something like this pop up: ![](../../imgs/gcloud_version.png)

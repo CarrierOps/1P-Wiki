@@ -23,7 +23,7 @@ This tutorial will highlight some basic and useful command for the [Windows comm
   <figcaption>Command Prompt On The Task Bar</figcaption>
 </figure>
 
-3. Navigate to anywhere you want in the file explore, and it the top search bar, click on it and type in cmd.
+3. Navigate to anywhere you want in the file explorer, and in the top search bar, click on it and type in cmd.
 <figure align="center">
     <img src="../../../imgs/Command Prompt From File Explorer.png" width="100%">
   <figcaption>Command Prompt From File Explorer</figcaption>

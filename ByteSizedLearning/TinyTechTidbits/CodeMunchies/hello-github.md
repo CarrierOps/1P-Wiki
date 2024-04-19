@@ -3,7 +3,7 @@
 ## Introduction
 
 ### What is Git?
-Git is a version control tool that allows you to take snapshots of your files. You can track changes made since the last snapshot track every file in a repository (folder) including sub-folders. It always you to develop in parallel using branches (more of this later❗). You can connect & save your git repository anywhere (GitHub) and collaborate with others on the same codebase/files.
+Git is a version control tool that allows you to take snapshots of your files. You can track changes made since the last snapshot and track every file in a repository (folder) including sub-folders. It allows you to develop in parallel using branches (more of this later❗). You can connect & save your git repository anywhere (GitHub) and collaborate with others on the same codebase/files.
 
 ### What is GitHub?
 
@@ -24,10 +24,10 @@ GitHub also provides many additional features such as:
 
 ## Common Commands
 
-- `git init`: This command converts any directory into a Git Repository. This command is needed to start a git project starting from as local directory. For some more details on this command visit the [Official GitHub Documentation](https://github.com/git-guides/git-init) 👀.
+- `git init`: This command converts any directory into a Git Repository. This command is needed to start a git project starting from a local directory. For some more details on this command visit the [Official GitHub Documentation](https://github.com/git-guides/git-init) 👀.
 
 
-- `git clone`: This command allows you to clone a GitHub Repository so that you have the ability to work on a code repository with others and be able to make changes to and receive changes from others. When you clone a repository, you copy the repository from GitHub.com to your local machine. Cloning a repository pulls down a full copy of all the repository data that GitHub.com has at that point in time, including all versions of every file and folder for the project. Here is an example of cloning using the `1P Wiki`.
+- `git clone`: This command allows you to clone a GitHub Repository so that you have the ability to work on a code repository with others and be able to make changes and receive changes from others. When you clone a repository, you copy the repository from GitHub.com to your local machine. Cloning a repository pulls down a full copy of all the repository data that GitHub.com has at that point in time, including all versions of every file and folder for the project. Here is an example of cloning using the `1P Wiki`.
 
   **ex:** ```git clone https://github.com/CarrierOps/1P-Wiki.git ```
 
@@ -41,7 +41,7 @@ GitHub also provides many additional features such as:
 
 
 
-- `git add`: This command allows you to specify which which changes you want to add to the repository. The add commands also sets up the `git commit` as all of the files added with be apart of the save point created by `git commit`. For example, if I wanted to add the change made to this current file as seen in the ***git status*** figure, you can use the following command
+- `git add`: This command allows you to specify which changes you want to add to the repository. The add commands also sets up the `git commit` command as all of the files added with be apart of the save point created by `git commit`. For example, if I wanted to add the change made to this current file as seen in the ***git status*** figure, you can use the following command:
 
   **ex:** `git add ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-github.md`
 
@@ -62,7 +62,7 @@ You can use `git add .` to add all changes made at once with one command. This i
 
   **Pro Tip 😎:** The `origin` command is an alias name for the remote repository that a project was originally cloned from. This is much easier than rewriting out the repository again.
 
-- `git pull`: This command gets the latest version of the GitHub repository with all the latest edits and makes sure that your local version has all of those changes. Here's the command I would run to pull the changes others have made to this repository 🫷 .
+- `git pull`: This command gets the latest version of the GitHub repository with all of the latest edits and makes sure that your local version has all of those changes. Here's the command I would run to pull the changes others have made to this repository 🫷 .
 
   **ex:** `git pull origin`
 
@@ -98,7 +98,7 @@ To create a new branch, you can using the `git checkout -b` command. As an examp
 
 
 ## Importance Of Branching
-A `branch` in GitHub is in really simple terms, another copy of the repository. Branches are very important however, as it allows us develop independently of other branches. This is very useful as lets us develop, fix bugs, and add new features while keeping the functionality of the main branch active. Here's analogy of why branching is important. Lets say you have a cookie company 🍪, and customers really like your cookies. However, you want to try and experiment and try out some new flavours/ideas with your cookies. As a good cookie company owner, you won't apply these changes to your products immediately as you would probably want people to test your new cookie ideas before sending them out to the market. This is the same idea with code and branches. You want your `main` or `prod`(production branch) always working well, but you can experiment and fix things in the `dev`(developer branch) or other sub-branches. 
+A `branch` in GitHub is in really simple terms, another copy of the repository. Branches are very important however, as it allows us develop independently of other branches. This is very useful as lets us develop, fix bugs, and add new features while keeping the functionality of the main branch active. Here's analogy of why branching is important. Let's say you have a cookie company 🍪, and customers really like your cookies. However, you want to try and experiment and try out some new flavours/ideas with your cookies. As a good cookie company owner, you won't apply these changes to your products immediately as you would probably want people to test your new cookie ideas before sending them out to the market. This is the same idea with code and branches. You want your `main` or `prod`(production branch) always working well, but you can experiment and fix things in the `dev`(developer branch) or other sub-branches. 
 
 <figure align="center">
     <img src="../../../imgs/Git Branches.png" width="100%">
@@ -109,7 +109,7 @@ A `branch` in GitHub is in really simple terms, another copy of the repository. 
 
 
 ## Github Actions
-GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. Please visit the [GitHub Markdown](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/GitHub.md) for further reading. You can also visit the offical [GitHub Documentation](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) for a fully comprehensive explanation of GitHub actions and how to use them.
+GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. Please visit the [GitHub Markdown](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/GitHub.md) for further reading. You can also visit the offical [GitHub Documentation](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) for a more comprehensive explanation of GitHub actions and how to use them.
 
 
 

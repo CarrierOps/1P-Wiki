@@ -44,8 +44,8 @@ When exploring different tables in BigQuery, the 3 most common things to check a
 </figure>
 
 * The schema section shows you all of the columns in the table as well as their data types.
-* The details sections give you some general information about the tables such as when it was create, how many rows of data there are, and the amount of store the table uses.
-* The preview sections shows you what the table looks like and allows to you see some of the specific values in that table.
+* The details sections give you some general information about the tables such as when it was created, how many rows of data there are, and the amount of storage the table uses.
+* The preview sections shows you what the table looks like and allows you to see some of the specific values in that table.
 
 
 ## Querying In BigQuery
@@ -83,7 +83,7 @@ If you want to view your query results in a different place, tool, or file forma
   <figcaption>Exporting And Viewing Options</figcaption>
 </figure>
 
-If you click the save results button, you will get the following popup which will allow you to save your query in whatever file format you given a variety of options. The two most common options to export data are in the `csv` or `google sheets` format.
+If you click the save results button, you will get the following popup which will allow you to save your query in whatever file format you want given a variety of options. The two most common options to export data are in the `csv` or `google sheets` format.
 
 <figure align="center">
     <img src="../../../imgs/Hello-BQ/Exporting Options In BigQuery.png" width="100%">

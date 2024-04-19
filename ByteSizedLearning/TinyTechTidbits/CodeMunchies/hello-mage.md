@@ -32,7 +32,7 @@ This is the homepage or landing page. Here a some of the important, most used th
 
 - **Red section**: Displays the status of the pipeline runs for the selected time period (succeeded, failed, canceled).
 - **Yellow section**: Shows you where you are in the MageUI (navigation helper). You can click on these to navigate back to a given page.
-- **green section**: Gives you information about the version you're using and the time (local server time, unless you change in the settings).
+- **Green section**: Gives you information about the version you're using and the time (local server time, unless you change in the settings).
 - **Blue section**: Contains navigation to different parts of Mage. Here are the numbers that are relevant to the commonly used sections:
   - **1**: The landing page/home screen (current page in the screen shot).
   - **2**: The [pipelines page](#pipelines-page). The page where you can see all your pipelines listed.
@@ -118,7 +118,7 @@ There are 3 types of triggers: Schedule, Event, and API.
 </figure>
 
 - **Schedule**: Lets you run your pipelines on a set schedule. The schedule can be defined using a [cron expression](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/cron-expressions.md) or preset options using a drop-down menu.
-- **Event**: Let's you trigger pipelines when an event happens in the cloud. Example: a new file is uploaded to storage. Currently only supported for AWS. But this functionality can be mimicked using an API trigger, [pubsub](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/pubsub.md) and a script (cloud function, cloud run, etc).
+- **Event**: Lets you trigger pipelines when an event happens in the cloud. Example: a new file is uploaded to storage. Currently only supported for AWS. But this functionality can be mimicked using an API trigger, [pubsub](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/pubsub.md) and a script (cloud function, cloud run, etc).
 - **API**: This creates an API endpoint which accepts a [POST request](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/HTTP.md#method). When a request is made to this endpoint, the pipeline is ran. Data it passed along with the POST request and is used to edit runtime variables.
 
 ## Developing pipelines
@@ -129,7 +129,7 @@ There are 3 types of triggers: Schedule, Event, and API.
     - for example, I host it on a folder in my desktop: `C:\Users\thomas.genet\OneDrive - Acosta, Inc\Desktop\Google Carrier\data_infra`
   - Then enter the command: `git clone --branch dev https://github.com/CarrierOps/pplns_repo`
 - From your command line, navigate to the `pplns_repo` directory.
-- Then run the following command
+- Then run the following command.
 
 ```bash
 docker run -it -e "USER_CODE_PATH=/home/src/dwh_pplns" -e "GOOGLE_APPLICATION_CREDENTIALS=dev_infra_key.json" -p 6789:6789 -v "%cd%:/home/src" mageai/mageai /app/run_app.sh mage start dwh_pplns

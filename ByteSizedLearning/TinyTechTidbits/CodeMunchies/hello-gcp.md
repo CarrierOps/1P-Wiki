@@ -2,7 +2,7 @@
 
 
 ## What Is The Cloud?
-The Cloud is essentially a global network of servers which are connected and operate as a single ecosystem. These servers can provide functions such as storing and managing data(Google Cloud Storage), running applications/services such as BigQuery, along with many other uses.
+The Cloud is essentially a global network of servers which are connected and operate as a single ecosystem. These servers can provide functions such as storing and managing data (Google Cloud Storage), running applications/services such as BigQuery, along with many other uses.
 
 ## Home Screen
 When first getting started on GCP, the first thing you will most likely see is the home screen.
