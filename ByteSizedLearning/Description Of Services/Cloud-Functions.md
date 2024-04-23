@@ -9,6 +9,7 @@
 - Tour of cloud function
 - secure cloud function -> public/private
 - how to connect securely 
+- 
 -  -->
 
 ## What Are Cloud Functions?
