@@ -28,11 +28,11 @@ The pipeline is schedule to run on **Monday's at 1pm PST and Friday's at 1pm PST
 
 
 flowchart TD
-id0([Google Plx Trix])
+
 id0000(Google Sheets)
 id00(Google App Script)
 id000[/sell-through/tmo_mobile_one/raw\]
-id0 --> id0000
+
 id0000 --> id00
 id00--GCS Bucket --> id000
 
