@@ -14,7 +14,7 @@ Here's a diagram showing the difference.
 
 <figure align="center">
     <img src="../../imgs/row_vs_col.png" width="85%">
-<figcaption>row vs col storage</figcaption>
+<figcaption>Row vs Column storage</figcaption>
 </figure>
 
 ## Row vs Columns

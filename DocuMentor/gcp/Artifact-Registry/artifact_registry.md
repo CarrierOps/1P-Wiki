@@ -1,6 +1,6 @@
 # Artifact Registry
 
-For a more in-depth explanation of artifact registry, [check out this documentation](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/artifact-registry.md)
+For a more in-depth explanation of artifact registry, [check out this documentation](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/Description%20Of%20Services/artifact-registry.md).
 
 ## Repositories
 

@@ -1,6 +1,7 @@
-# Command line
+# Getting Started With The Command line
 
-We all know that computer are just machines that only understand 0s and 1s. So then how come you can do things on your computer through a nifty graphical user interface (GUI) - how come you can use your mouse to open programs and do things and instead of having to type in a series of 0s and 1s?
+ 
+ Computers are just machines that only understand 0s and 1s. So then how come you can do things on your computer through a nifty graphical user interface (GUI) - how come you can use your mouse to open programs and do things and instead of having to type in a series of 0s and 1s?
 
 The answer lies in the various layers of abstraction that exist between the binary zeros and ones and the GUIs. These layers translate our interactions into instructions that the computer's hardware can execute. Among these layers, one of the most pivotal is the command line interface (CLI).
 
@@ -11,6 +12,23 @@ Unlike the GUI, which simplifies interaction by visualizing the computer's file 
 The list of commands you can run will depend entirely on your operating system, and commands from one OS to the next may be widely different (think windows vs linux).
 
 This tutorial will highlight some basic and useful command for the [Windows command prompt](#windows-command-prompt), as well as some [linux commands](#linux).
+
+
+## How To Open The Command Prompt
+
+1. Type cmd in the windows search bar and then click open.
+2. Do the same steps as in 1. , but click pin to task bar. This will allow you to click on the command prompt to open it really quickly.
+<figure align="center">
+    <img src="../../../imgs/Command Prompt On The Task Bar.png" width="100%">
+  <figcaption>Command Prompt On The Task Bar</figcaption>
+</figure>
+
+3. Navigate to anywhere you want in the file explorer, and in the top search bar, click on it and type in cmd.
+<figure align="center">
+    <img src="../../../imgs/Command Prompt From File Explorer.png" width="100%">
+  <figcaption>Command Prompt From File Explorer</figcaption>
+</figure> 
+
 
 ## Windows Command Prompt
 
@@ -37,7 +55,7 @@ This tutorial will highlight some basic and useful command for the [Windows comm
 - **`code .`**: Opens Visual Studio Code at your current location.
 - **`code`**: Opens Visual Studio Code with no files or directories open.
 
-You can find a list of all available commands [here](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd)
+You can find a list of all available commands [here](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd).
 
 ## Linux
 
@@ -73,7 +91,7 @@ You can find a list of all available commands [here](https://learn.microsoft.com
 - **`ps`**: Displays currently running processes.
 - **`kill {process_id}`**: Terminates the specified process.
 
-For a full list of all core Linux commands, [check out this page](https://ss64.com/bash/)
+For a full list of all core Linux commands, [check out this page](https://ss64.com/bash/).
 
 > **Note**
 >

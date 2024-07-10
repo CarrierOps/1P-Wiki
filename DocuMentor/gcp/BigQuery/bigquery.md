@@ -1,6 +1,6 @@
 # BigQuery Structure
 
-BigQuery is the star of the show! It is where all data that is used for reporting, dashboard, analytics, etc is stored. It is where all raw data ends up after being cleaned, refined, aggregated, transformed, and modeled.
+BigQuery is the star of the show! It is where all data that is used for reporting, creating dashboards, analytics, etc is stored. It is where all raw data ends up after being cleaned, refined, aggregated, transformed, and modeled.
 
 BigQuery houses `silver`, `gold`, and `platinum` layer data. You can [check out this documentation](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/data-layer.md) for more details on the different layers of data.
 

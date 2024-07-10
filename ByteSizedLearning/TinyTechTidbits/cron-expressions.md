@@ -4,7 +4,7 @@
 
 Syntax used for time-based scheduled jobs in UNIX (think Linux or Apple's OS x). They are typically called `cron jobs`, which are defined by a `cron expression`.
 
-`cron expressions` are a string composed of 5 or 6 fields separated by spaces. So a typical cron job look like this: `* * * * *`. Each field represents a time dimension. So (listing the fields from left to right as they appear in the cron-expression):
+`Cron expressions` are a string composed of 5 or 6 fields separated by spaces. So, a typical cron job looks like this: `* * * * *`. Each field represents a time dimension. Here is a listing of the fields from left to right as they appear in the cron-expression:
 
 1. Minute (0-59)
 2. Hour (0 -23)
@@ -24,10 +24,13 @@ There are also special character that can be used in cron-jobs such as:
 
 Some examples:
 
-- `* * * * *`: run every minute, every day, every month
-- `0 8 * * *`: Run every day at 8am
-- `0 8 * * 1-5`: Run at 8am Monday through Friday
-- `*/15 * * * *`: runs every 15 mins every day of every month
-- `30 9-17 * * 1-5`: Run at the half-hour mark every Monday through Friday between the hours of 9am and 5pm
-- `*/15 8-11 * * Wed`: Runs every 15 minutes between the hours of 8am and 11am every Wednesday
-- `0-30/10 * * * 1-5` Runs every 10th minute from the 0th to the 30th minute of every hour Monday through Friday
+- `* * * * *`: Runs every minute, every day, every month.
+- `0 8 * * *`: Runs every day at 8am.
+- `0 8 * * 1-5`: Runs at 8am Monday through Friday.
+- `*/15 * * * *`: Runs every 15 mins every day of every month.
+- `30 9-17 * * 1-5`: Runs at the half-hour mark every Monday through Friday between the hours of 9am and 5pm.
+- `*/15 8-11 * * Wed`: Runs every 15 minutes between the hours of 8am and 11am every Wednesday.
+- `0-30/10 * * * 1-5` Runs every 10th minute from the 0th to the 30th minute of every hour Monday through Friday.
+
+To practice using `cron expressions`, you can visit
+[Crontab guru](https://crontab.guru/).

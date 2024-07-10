@@ -32,7 +32,7 @@ Pub/Sub is just one example of a messaging service. There are others such as, Ap
 
 ## Why and how do we use it
 
-Messaging services like Pub/Sub have many many use cases such as streaming data, communication between distributed systems/micro-services, creating event-driven processes, etc.
+Messaging services like Pub/Sub have many use cases such as streaming data, communication between distributed systems/micro-services, creating event-driven processes, etc.
 
 For our use cases, we use Pub/Sub to create an event-driven architecture on GCP. We can look at the image (Fig. 1) below for an example.
 
