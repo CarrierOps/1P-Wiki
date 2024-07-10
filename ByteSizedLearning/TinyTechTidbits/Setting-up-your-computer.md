@@ -29,6 +29,11 @@ All items with an asterisk require IT to install
 - GitHub Desktop app
 - Windows Terminal
 
+> **!!! IMPORTANT !!!**
+>
+> WSL2 must be installed before Docker!!!
+> Docker requires WSL2 to be installed & working.
+
 ## Installation guide
 
 ### Python
@@ -67,7 +72,32 @@ If instead you get a message along the lines of `'gcloud' is not recognized as a
 
 ### WSL2
 
+All septs & more info can be found [here](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+1. Open up Command prompt (or Power Shell) as an admin (you will need IT to remotely access your computer to do this)
+2. run the command `systeminfo`
+3. Look for "OS Version" in the output ![](../../imgs//systeminfo.png)
+4. You need to either be running Windows 11 or have a build number $\ge$ 19041 if you're running Windows 10.F
+   1. If that's not the case, get IT to update your computer to either windows 11 or a windows 10 build $\ge$ 19041
+5. Enter the command `wsl --install`
+6. You're done! This will have set up WSL2 (not WSL1) with Ubuntu on your machine
+   1. You can follow the link above to see how to download new distros
+   2. Nobody cares if you chose to use Arch Linux
+   3. ![](../../imgs/arch_linux.jpg)
+
+To test that it worked. Open up a new terminal and enter the following command: `wsl -l -v` which should output something similar to this: ![](../../imgs/wsl_check.png). 
+
+Then enter the command `wsl` this will launch Linux. **MAKE SURE** to run this while you still have IT helping you as running this command for the first time will finalize the installation.
+
 ### Docker
+
+Follow [this link](https://docs.docker.com/desktop/install/windows-install/) for a full list of steps
+
+1. Go to [this link](https://docs.docker.com/desktop/release-notes/) and download the installer for windows (an exe file)
+2. Run the exe file downloaded in the previous step
+3. During the installation, when prompted to chose between `WSL2` or `Hyper-V`, make sure you chose `WSL2`!!!
+4. Continue with the installation until you're done.
+5. Once Docker
 
 ### VS Code
 
