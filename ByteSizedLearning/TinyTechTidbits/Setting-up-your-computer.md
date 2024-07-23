@@ -97,7 +97,9 @@ Follow [this link](https://docs.docker.com/desktop/install/windows-install/) for
 2. Run the exe file downloaded in the previous step
 3. During the installation, when prompted to chose between `WSL2` or `Hyper-V`, make sure you chose `WSL2`!!!
 4. Continue with the installation until you're done.
-5. Once Docker is installed, open the desktop app and run the following commands in the terminal
+5. You (your windows account) will then needed to be added to the Docker user group
+   1. [Follow the steps in this link](https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/ide/troubleshooting-docker-errors#docker-users-group) to do that
+6. Once Docker is installed, open the desktop app and run the following commands in the terminal
    1. `docker -v`
       1. You should see something like `Docker version 24.0.5, build ced0996` as the output
    2. run `docker run hello-world`
