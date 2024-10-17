@@ -1,11 +1,11 @@
-# TMO Sales Data Documentation
+# TMO Mobile One Sales Data Documentation
 
 ## Summary
-The TMO sales data pipeline takes data from a Google Plx Trix and brings that data into BigQuery.
+The TMO Mobile One sales data pipeline takes data from a Google sheet and brings that data into BigQuery.
 
 
 ## Cadence
-The pipeline is schedule to run on **Monday's at 1pm PST and Friday's at 1pm PST**.
+The pipeline is schedule to run on **Tuesdays's at 9am EST**.
 
 ## Flowchart
 
