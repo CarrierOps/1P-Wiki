@@ -1,7 +1,7 @@
 # TMO Wireless Vision Sales Data Documentation
 
 ## Summary
-The TMO Wireless Vision sales data pipeline takes data from a `csv` file sent to us by email.
+The TMO Wireless Vision sales data pipeline takes data from a `xlsx` file sent to us by email.
 
 
 ## Cadence

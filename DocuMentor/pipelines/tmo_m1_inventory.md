@@ -18,3 +18,4 @@ The pipeline is schedule to run on **Tuesdays's at 9am EST**.
 4. A `uid` is created from the concatenation of `date`,`time`, `retail_id`, `starting_soh`, `movement_qty`, `ending_soh`, `user_id`,`serial_number`, and `sku_description`.
 5. Data types are then enforced to ensure the consistency of the data.
 6. The data is then exported to BigQuery using a `MERGE STATEMENT` and GCS a clean `parquet` file is sent to the `clean` subfolder with the `tmo_mobile_one` folder.
+7. A `gold layer` table is then created using SQL sent as a bigquery job which further cleans up the inventory data. This table is called `tmo_m1_inventory_gold`.
