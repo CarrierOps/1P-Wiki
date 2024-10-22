@@ -1,7 +1,5 @@
 # How To Trigger Pipelines
 
-WIP -> More to come!!!!
-
 ## TMO Pipelines
 
 ***TMO Mobile One Sales:***
@@ -79,4 +77,106 @@ WIP -> More to come!!!!
 - To trigger the pipeline, place this file into a bucket called `the-beach-stg`.
 
 
+## Bell Pipelines
 
+***Bell Sales Data:***
+- Data gets sent via email in `csv` format.
+- Rename the file as follows: `Bell Sales - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `Bell Sales - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+
+## Best Buy Pipelines
+***Best Buy Canada:***
+- The pipeline can be manually triggered by running the `BBY CA Pull` 
+Google App Script. 
+- The pipeline can also be triggered by downloading the data from the google sheet
+and then renaming it as follows `CA BBY_sellout - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `CA BBY_sellout - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+***Best Buy US:***
+- The pipeline can be manually triggered by running the `BBY US Pull` 
+Google App Script. 
+- The pipeline can also be triggered by downloading the data from the google sheet
+and then renaming it as follows `US BBY_sellout - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `US BBY_sellout - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+
+## Activations Pipelines
+
+
+**CA Activations:**
+
+- The pipeline can be manually triggered by running the `CA Activations Pull` 
+Google App Script. 
+- The pipeline can also be triggered by downloading the data from the google sheet
+and then renaming it as follows `CA Carrier Activations - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `CA Carrier Activations - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+***US Activations:***
+
+- The pipeline can be manually triggered by running the `US Activations Pull` 
+Google App Script. 
+- The pipeline can also be triggered by downloading the data from the google sheet
+and then renaming it as follows `US Carrier Activations - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `US Carrier Activations - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+## AT&T Pipelines
+**ATT Sales Pipeline:**
+
+- The pipeline can be manually triggered by running the `ATT Sales Pull` 
+Google App Script. 
+- The pipeline can also be triggered by downloading the data from the google sheet
+and then renaming it as follows `ATT dailysales - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `ATT dailysales - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+
+## GFA Pipelines
+**GFA Data Pipeline:**
+
+- The pipeline can be manually triggered by running the `GFA GCS Dump` 
+Google App Script.
+- The pipeline can also be triggered by downloading the data from the google sheet
+and then renaming it as follows `GFA Data - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `GFA Data - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+**GFA Store Visits Pipeline:**
+
+- The pipeline can be manually triggered by running the `GFA Store Visits Dump` 
+Google App Script.
+- The pipeline can also be triggered by downloading the data from the google sheet
+and then renaming it as follows `Store Visits - mm.dd.yyyy - raw.csv`. 
+As an exmaple, at the time of writing this, the day is 10/22/2024, 
+therefore the file name should be `Store Visits - 10.22.2024 - raw.csv`.
+- To trigger the pipeline, place this file into a bucket called the-beach-stg.
+
+
+
+## Other Pipelines
+**Note 1** for some other pipelines you will need access to [MAGE](https://github.com/CarrierOps/1P-Wiki/blob/main/ByteSizedLearning/TinyTechTidbits/CodeMunchies/hello-mage.md).
+
+**Note 2:** If you need to manually trigger pipelines that are not listed above, please contact Michael or Thomas.
+
+
+**Example Of A Successful Run:**
+<figure align="center">
+    <img src="../imgs/mage_successful_run.png" width="100%">
+  <figcaption>Successful Mage Pipeline Run</figcaption>
+</figure>
+
+- To see if your pipeline run is successful, on the side navigtion bar of mage go to `pipeline runs`. 
+- If you pipeline you triggered have a status of done as seen in the figure above, then the pipeline run has been successful 😃. 
+- If not, you may have to debug in which you will need to click the logs button beside the status indicator or once again contact Michael or Thomas.
