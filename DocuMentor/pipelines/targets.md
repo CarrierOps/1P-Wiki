@@ -4,7 +4,7 @@
 The pipeline automates the manual work of the target setting process. A process usually taking 10-12 hours per month across various members now reduced down to mere minutes.
 
 
-## Cadance
+## Cadence
 Monthly -> Whenever forecast sales data comes in.
 
 
