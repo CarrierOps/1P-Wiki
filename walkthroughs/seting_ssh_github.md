@@ -35,6 +35,7 @@ Using HTTPS to interact with GitHub may be easier for most actions (cloning, pus
       - provide your passphrase if prompted for it
 
 add verification:
+
 ``` bash
 git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519.pub
