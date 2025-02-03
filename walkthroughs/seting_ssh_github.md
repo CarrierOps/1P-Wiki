@@ -33,3 +33,10 @@ Using HTTPS to interact with GitHub may be easier for most actions (cloning, pus
       - If instead you see this message:
          `Are you sure you want to continue connecting (yes/no/[fingerprint])?` then type `yes` then hit \<enter>
       - provide your passphrase if prompted for it
+
+add verification:
+``` bash
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+git config --global commit.gpgSign true
+```
