@@ -56,3 +56,7 @@ The pub key should be at:
 `C:\Users\<user>\.ssh\id_ed25519.pub.pub`
 
 >**IMPORTANT** Make sure to use the same key as the one you use for authentication.
+
+To test that it worked, make a commit and push it to GitHub. Now to go to that repository on github, navigate to the branch
+you pushed to, and click on commits. You should see a "verified" label beside the commit
+![alt text](../imgs/verified_commit.png)
