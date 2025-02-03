@@ -41,3 +41,18 @@ git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519.pub
 git config --global commit.gpgSign true
 ```
+
+go to
+> github > settings > SSH and GPG keys
+
+Now click on `new SSH key`, and select `Signing Key`
+
+![ssh signing key](../imgs/ssh_signing_key.png)
+
+Enter the content of the public key you created earlier
+
+The pub key should be at:
+
+`C:\Users\<user>\.ssh\id_ed25519.pub.pub`
+
+>**IMPORTANT** Make sure to use the same key as the one you use for authentication.
