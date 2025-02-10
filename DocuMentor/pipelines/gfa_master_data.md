@@ -6,7 +6,7 @@ The gfa_master_data pipeline takes survey directly from salesforce that is conne
 ## Flowchart
 WIP
 
-# Key transformations
+## Key transformations
 
 - Reformat column names to snake case.
 - `Survey_responses` is `LEFT JOINED` with `survey_with_sva` on `survey_response_id` and then `LEFT JOINED` with `sva_with_visit_id` on `store_visit_activity_id`. This generates the table `gfa_master_data`.
