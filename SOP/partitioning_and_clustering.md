@@ -21,10 +21,39 @@ SELECT t0.open_loa AS clmn0_, t0.relative_cycle_label AS clmn1_, t0.relative_qua
 
 
 
-## What's the Benefit of Partitioning & Clustering?
+## What are the Benefit of Partitioning & Clustering?
 
 A properly setup Looker Studio dashboard with a `partitioned` table can save up to `99% data usage` when applying filters to a dashboard. The amount of savings depending on big of a range is applied to the `partitioned` column. The smaller and more refined the range, the bigger the savings!!!
 
+## How to Properly Setup A Partitioned & Clustered Table Linked To A Dashboard?
+
+### By Using Code:
+```
+CREATE OR REPLACE TABLE {data_layer.table_name}
+
+Partition by date_column
+
+Cluster by col_1, col_2, col_3, col_4
+
+As
+
+{query}
 
 
-## How to Properly Setup A Partitioned Table Linked To A Dashboard?
+```
+
+### By Using the Bigquery User Interface
+
+<figure align="center">
+    <img src="../imgs/SOP/bq_partition.png" width="95%">
+  <figcaption>Figure 1: BigQuery Partitioning</figcaption>
+</figure>
+
+
+<figure align="center">
+    <img src="../imgs/SOP/bq_cluster.png" width="95%">
+  <figcaption>Figure 2: BigQuery Clustering</figcaption>
+</figure>
+
+
+**NOTE:** Whatever you use as your partition & cluster must be the main filters in your dashboard since those columns are what BihgQuery has metadata on!
