@@ -2,7 +2,7 @@
 
 ## Brief Summary:
 
-Partitioning and clustering your tables and a really simple way to get data usage savings with effectively zero cost. Zero risk non zero reward 👌.
+Partitioning and clustering your tables is a really simple way to get data usage savings with effectively zero cost. Zero risk non zero reward 👌.
 
 ## Reasoning and Background
 
@@ -17,13 +17,13 @@ SELECT t0.open_loa AS clmn0_, t0.relative_cycle_label AS clmn1_, t0.relative_qua
 
 ```
 
-**Partitioning & Clustering** gives BigQuery Metadata about our tables which allows it to segment the data into `partitions`. The standard practice is to partition by the the column that changes the most with time which is just usually the main `Date` column. `Clustering` further organizes the `partitions` such that the columns within each `partition` are further organized.
+**Partitioning & Clustering** gives BigQuery Metadata about our tables which allows it to segment the data into `partitions`. The standard practice is to partition by the column that changes the most with time which is just usually the main `Date` column. `Clustering` further organizes the `partitions` such that the columns within each `partition` columns are further organized.
 
 
 
 ## What are the Benefit of Partitioning & Clustering?
 
-A properly setup Looker Studio dashboard with a `partitioned` table can save up to `99% data usage` when applying filters to a dashboard. The amount of savings depending on big of a range is applied to the `partitioned` column. The smaller and more refined the range, the bigger the savings!!!
+A properly setup Looker Studio dashboard with a `partitioned` table can save up to `99% data usage` when applying filters to a dashboard. The amount of savings depends on how big of a range is applied to the `partitioned` column. The smaller and more refined the range, the bigger the savings!!!
 
 ## How to Properly Setup A Partitioned & Clustered Table Linked To A Dashboard?
 
