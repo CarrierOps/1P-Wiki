@@ -40,9 +40,19 @@ Please analyze **Figure 1** and make sure it makes sense. Please reach out if it
 
 **SINE: Simple Is Not Easy**
 
-A simple solution to a complicated problem is often very efficient. Being efficient is not necessarily easy, but it's **necessary**.
+A simple solution to a complicated problem is often very efficient. Being efficient is not easy, but it's **necessary**.
 
 
 
+**Best Practices When Creating Tables**
+
+The following points are must haves when making tools from raw data in silver that will be used to power dashboards.
+
+
+- Partition & Cluster Your Tables.  
+- Have Only Necessary Columns.
+- Simplify Your Logic -> See The 4 Design Principles
+- When Prototyping, Only Use A Subset Of The Data In The Dashboard For Testing.
+- Use Multiline Comments(Especially Useful For CTEs)
 
 
