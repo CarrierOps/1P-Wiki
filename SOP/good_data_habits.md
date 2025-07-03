@@ -1,6 +1,7 @@
 # Data Best Practices
 
 ## Brief Overview
+
 This file discusses some of the best design practices with regards to using data within a database for the client. It's important to try to and utilize our data in an efficient way to prevent/minimize exponential growth of incurred costs. 
 
 ## Design Mindset
@@ -13,4 +14,35 @@ Please analyze **Figure 1** and make sure it makes sense. Please reach out if it
 </figure>
 
 
-## 3 Coding Principles To Be More Efficent
+## 4 Design Principles To Be More Efficent
+
+**DRY: Don't Repeat Yourself**
+
+**Examples Of This Principle:**
+
+- Write the same code only once.
+- Don't create the same table with a slight difference over and over again.
+- Don't create multiple dashboards and visuals that are effectively showing the same thing.
+
+**YAGNI: You Ain't Gonna Need it**
+
+**Examples Of This Principle:**
+
+- Don't write code you don't need now.
+- Don't create a whole bunch of tables that are not really necessary.
+- Don't create dashboards/views now that you might need down the line or are not really that necessary.
+
+**KISS: Keep It Stupidly Simple**
+
+**The simplest solution is the best solution**. It makes it easier for other to understand and for others to contribute on. Remember that the most complicated problems whether it's in the field of physics, math, economics, business etc have been solved with the **simplest solution**.
+
+
+
+**SINE: Simple Is Not Easy**
+
+A simple solution to a complicated problem is often very efficient. Being efficient is not necessarily easy, but it's **necessary**.
+
+
+
+
+
