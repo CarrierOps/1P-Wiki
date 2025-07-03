@@ -49,6 +49,7 @@ As
   <figcaption>Figure 1: BigQuery Partitioning</figcaption>
 </figure>
 
+<br>
 
 <figure align="center">
     <img src="../imgs/SOP/bq_cluster.png" width="95%">
@@ -56,7 +57,9 @@ As
 </figure>
 
 
-
+<br>
+<br>
+<br>
 
 
 **NOTE:** Whatever you use as your partition & cluster must be the main filters in your dashboard since those columns are what BigQuery has metadata on!
