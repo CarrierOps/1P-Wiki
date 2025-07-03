@@ -49,10 +49,16 @@ A simple solution to a complicated problem is often very efficient. Being effici
 The following points are must haves when making tools from raw data in silver that will be used to power dashboards.
 
 
-- Partition & Cluster Your Tables.  
+- [Partition & Cluster Your Tables](https://github.com/CarrierOps/1P-Wiki/blob/main/SOP/partitioning_and_clustering.md).  
 - Have Only Necessary Columns.
 - Simplify Your Logic -> See The 4 Design Principles
 - When Prototyping, Only Use A Subset Of The Data In The Dashboard For Testing.
-- Use Multiline Comments(Especially Useful For CTEs)
+
+
+
+
+**Nice To Have**
+
+- Use Multiline Comments For Complicated Queries(Especially Useful For CTEs)
 
 
