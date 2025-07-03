@@ -14,7 +14,7 @@ Please analyze **Figure 1** and make sure it makes sense. Please reach out if it
 </figure>
 
 
-## 4 Design Principles To Be More Efficent
+## 4 Design Principles To Be More Efficient
 
 **DRY: Don't Repeat Yourself**
 
