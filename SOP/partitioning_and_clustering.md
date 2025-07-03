@@ -21,7 +21,7 @@ SELECT t0.open_loa AS clmn0_, t0.relative_cycle_label AS clmn1_, t0.relative_qua
 
 
 
-## What are the Benefit of Partitioning & Clustering?
+## What are the Benefits of Partitioning & Clustering?
 
 A properly setup Looker Studio dashboard with a `partitioned` table can save up to `99% data usage` when applying filters to a dashboard. The amount of savings depends on how big of a range is applied to the `partitioned` column. The smaller and more refined the range, the bigger the savings!!!
 
