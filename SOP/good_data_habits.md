@@ -44,7 +44,7 @@ A simple solution to a complicated problem is often very efficient. Being effici
 
 
 
-**Best Practices When Creating Tables**
+## Best Practices When Creating Tables
 
 The following points are must haves when making tools from raw data in silver that will be used to power dashboards.
 
@@ -57,8 +57,9 @@ The following points are must haves when making tools from raw data in silver th
 
 
 
-**Nice To Have**
+## Nice To Have When Creating Tables
 
 - Use Multiline Comments For Complicated Queries(Especially Useful For CTEs)
+- Lineage clearly mapped out with cardinality known.
 
 
