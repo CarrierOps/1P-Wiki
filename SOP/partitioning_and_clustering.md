@@ -56,4 +56,7 @@ As
 </figure>
 
 
-**NOTE:** Whatever you use as your partition & cluster must be the main filters in your dashboard since those columns are what BihgQuery has metadata on!
+
+
+
+**NOTE:** Whatever you use as your partition & cluster must be the main filters in your dashboard since those columns are what BigQuery has metadata on!
