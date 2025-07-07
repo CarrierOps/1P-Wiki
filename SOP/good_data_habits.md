@@ -2,7 +2,7 @@
 
 ## Brief Overview
 
-This file discusses some of the best design practices with regards to using data within a database for the client. It's important to try to and utilize our data in an efficient way to prevent/minimize exponential growth of incurred costs. 
+This file discusses some of the best design practices with regards to using data within a database for the client. It's important to try to and utilize our data in an efficient way to prevent/minimize exponential growth of incurred costs. For a more detailed look into reducing costs, click here.
 
 ## Design Mindset
 
