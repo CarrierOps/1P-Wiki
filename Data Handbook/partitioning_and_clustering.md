@@ -17,7 +17,7 @@ SELECT t0.open_loa AS clmn0_, t0.relative_cycle_label AS clmn1_, t0.relative_qua
 
 ```
 
-**Partitioning & Clustering** gives BigQuery Metadata about our tables which allows it to segment the data into `partitions`. The standard practice is to partition by the column that changes the most with time which is just usually the main `Date` column. `Clustering` further organizes the `partitions` such that the columns within each `partition` columns are further organized.
+**Partitioning & Clustering** gives BigQuery Metadata about our tables which allows it to segment the data into `partitions`. The standard practice is to partition by the column that changes the most with time which is just usually the main `Date` column. `Clustering` further organizes the `partitions` such that the columns within each `partition` are further organized.
 
 
 

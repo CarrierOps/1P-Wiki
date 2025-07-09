@@ -34,14 +34,20 @@ In Figure 1, you can see how much data a full table scan uses on my test table. 
 
 Having more is not better. Having what you need is critical.
 
+<br>
+
+
 <figure align="center">
     <img src="../imgs/SOP/Choose Your Columns.png" width="95%">
   <figcaption>Figure 2: Reduction Of Usage Based On Columns Selected </figcaption>
 </figure>
 
+<br>
+<br>
+
 As you might imagine, the less column you select, the less data processed is required to perform the query. Just by selecting on the columns I needed, I reduced the total usage of my query by over 90%. When building tools, tables, and dashboards, be mindful of the columns you create and actually use. A lot of times, extra columns typically do not get used and get ignored. These columns will then only contribute to increasing the bill. 
 
-**Pro Tip:** If you have a lot of columns, it is probably worth unpivoting the data to convert to long format. This could help reduce the cost of the queries associated with your table or tool.
+**Pro Tip:** If you have a lot of columns, it is probably worth unpivoting the data to convert to `long format`. This could help reduce the cost of the queries associated with your table or tool.
 
 
 

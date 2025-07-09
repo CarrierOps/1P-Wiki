@@ -21,6 +21,7 @@ Please analyze **Figure 1** and make sure it makes sense. Please reach out if it
 **Examples Of This Principle:**
 
 - Write the same code only once.
+- Aim to be modular when writing code and creating tools/tables
 - Don't create the same table with a slight difference over and over again.
 - Don't create multiple dashboards and visuals that are effectively showing the same thing.
 
