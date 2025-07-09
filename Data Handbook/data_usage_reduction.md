@@ -47,7 +47,7 @@ As you might imagine, the less column you select, the less data processed is req
 
 ### Partition Your Tables
 
-Partitioning can help drastically reduce costs especially when the data is continuous with time. Your partition you select for your table must be either an date or integer type and be the primary filter in your looker dashboard. For more details about partitioning, please click [here](https://github.com/CarrierOps/1P-Wiki/blob/main/SOP/partitioning_and_clustering.md).
+Partitioning can help drastically reduce costs especially when the data is continuous with time. Your partition you select for your table must be either an date or integer type and be the primary filter in your looker dashboard. For more details about partitioning, please click [here](https://github.com/CarrierOps/1P-Wiki/blob/main/Data Handbook/partitioning_and_clustering.md).
 
 
 

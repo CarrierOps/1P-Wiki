@@ -2,7 +2,7 @@
 
 ## Brief Overview
 
-This file discusses some of the best design practices with regards to using data within a database for the client. It's important to try to and utilize our data in an efficient way to prevent/minimize exponential growth of incurred costs as well as build more maintainable tools and infrastructure. For a more detailed look into reducing costs, click [here](https://github.com/CarrierOps/1P-Wiki/blob/main/SOP/data_usage_reduction.md).
+This file discusses some of the best design practices with regards to using data within a database for the client. It's important to try to and utilize our data in an efficient way to prevent/minimize exponential growth of incurred costs as well as build more maintainable tools and infrastructure. For a more detailed look into reducing costs, click [here](https://github.com/CarrierOps/1P-Wiki/blob/main/Data Handbook/data_usage_reduction.md).
 
 ## Design Mindset
 
@@ -49,7 +49,7 @@ A simple solution to a complicated problem is often very efficient. Being effici
 The following points are must haves when making tools from raw data in silver that will be used to power dashboards.
 
 
-- [Partition & Cluster Your Tables](https://github.com/CarrierOps/1P-Wiki/blob/main/SOP/partitioning_and_clustering.md).  
+- [Partition & Cluster Your Tables](https://github.com/CarrierOps/1P-Wiki/blob/main/Data Handbook/partitioning_and_clustering.md).  
 - Have Only Necessary Columns.
 - Simplify Your Logic -> See The 4 Design Principles
 - When Prototyping, Only Use A Subset Of The Data In The Dashboard For Testing.
