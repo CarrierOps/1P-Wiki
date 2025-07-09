@@ -58,7 +58,7 @@ The more tables you bring in and do operations on in looker, the higher the cost
 
 ### Let BigQuery handle the calculations and calculated fields
 
-As much as physically possible, let BigQuery handle the calculations and not looker studio. Create the columns `you need` and import that into Looker with all of the above optimizations. Using the `data melt` feature in Looker seems nice at first, but when the logic gets complicated with many tables being added in, the amount of data used will be astronomically higher then just doing all of the calculations within Bigquery and importing that table into looker.
+As much as physically possible, let BigQuery handle the calculations and not looker studio. Create the columns `you need` and import that into Looker with all of the above optimizations. Using the `data blend` feature in Looker seems nice at first, but when the logic gets complicated with many tables being added in, the amount of data used will be astronomically higher then just doing all of the calculations within Bigquery and importing that table into looker.
 
 
 
