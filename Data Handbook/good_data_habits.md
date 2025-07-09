@@ -2,11 +2,11 @@
 
 ## Brief Overview
 
-This file discusses some of the best design practices with regards to using data within a database for the client. It's important to try to and utilize our data in an efficient way to prevent/minimize exponential growth of incurred costs. For a more detailed look into reducing costs, click [here](https://github.com/CarrierOps/1P-Wiki/blob/main/SOP/data_usage_reduction.md).
+This file discusses some of the best design practices with regards to using data within a database for the client. It's important to try to and utilize our data in an efficient way to prevent/minimize exponential growth of incurred costs as well as build more maintainable tools and infrastructure. For a more detailed look into reducing costs, click [here](https://github.com/CarrierOps/1P-Wiki/blob/main/SOP/data_usage_reduction.md).
 
 ## Design Mindset
 
-Please analyze **Figure 1** and make sure it makes sense. Please reach out if it does not. In terms of building client facing tools, we should aim to be **AGILE**. In terms of constructing queries that power these tools, we should aim to use the **WATERFALL** approach; hence why it's very encouraged to use **CTEs** & **recursive CTEs** when building queries. The **AI solutions**, well they might start off great, but they progressively get worse over time...
+Please analyze **Figure 1** and make sure it makes sense. Please reach out if it does not. In terms of building client facing tools, we should aim to be **AGILE**. In terms of constructing queries that power these tools, we should aim to use the **WATERFALL** approach; hence why it's very encouraged to use **CTEs** & **recursive CTEs** when building queries. It's also good practice to get parts of something working correctly first as opposed to getting everything working all at once i.e. **50% of something is better than a 100% of nothing**. The **AI solutions**, well they might start off great, but they progressively get worse over time...
 
 <figure align="center">
     <img src="../imgs/SOP/data_building.png" width="95%">
