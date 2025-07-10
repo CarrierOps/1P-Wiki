@@ -4,9 +4,9 @@
 
 ✅ Partitioned and clustered columns are the primary and secondary `filters` in the dashboard
 
-✅ Calculated fields and business logic done primarily in BigQuery or MAGE
+✅ Calculated fields and business logic done primarily in `BigQuery` and `Python`
 
-✅ The tables needed for a dashboard are concise`(Keep everything in one central tables as much as possible)`
+✅ The tables needed for a dashboard are concise`(Keep everything in one central table as much as possible)`
 
 ✅ Limited use of `Table Blend` in Looker
 
